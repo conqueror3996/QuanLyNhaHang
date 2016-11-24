@@ -18,12 +18,17 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 
 namespace QuanLyNhaHang
+
 {
     public partial class Form1 : Form
+    
     {
         String cnStr;
+	
         SqlConnection cn;
+	
         public Form1()
+	
         {
             InitializeComponent();
             
