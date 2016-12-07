@@ -23,8 +23,8 @@ namespace QL_Nhà_Hàng
         string cnStr=" ";
         private void Form1_Load(object sender, EventArgs e)
         {
-            cnStr = "Server=X451\\SQLEXPRESS; Database=QLBanHang; Integrated Security=True;";
-            //cnStr = ConfigurationManager.ConnectionStrings["cnStr"].ConnectionString;
+            //cnStr = "Server=X451\\SQLEXPRESS; Database=QLBanHang; Integrated Security=True;";
+            cnStr = ConfigurationManager.ConnectionStrings["cnStr"].ConnectionString;
             cn = new SqlConnection(cnStr);
        
             connect();
