@@ -1,0 +1,55 @@
+public List<Employee> GetEmployee(string sql)
+        {
+            Connect();
+            List<Employee> list = new List<Employee>();
+            try
+            {                
+                //string sql = "SELECT * FROM Nhanvien";
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                int id;
+                string lastName, firstName, address, phone;
+                while (dr.Read())
+                {
+                    id = dr.GetInt32(0);
+                    lastName = dr.GetString(1);
+                    firstName = dr.GetString(2);
+                    address = dr.GetString(3);
+                    phone = dr.GetString(4);
+                    Employee nv = new Employee(id, lastName, firstName, address, phone);
+                    list.Add(nv);
+                }
+                dr.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                DisConnect();
+            }
+            return list;            
+        }
+
+////////////////////////////////////
+public class Employee //Lop Nhan vien
+    {
+        //
+        public int ID { get; set; }
+        public string LastName { get; set; }
+        public string Firstname { get; set; }
+        public string Address { get; set; }
+        public string Phone { get; set; }
+
+        //
+        public Employee(int id, string lastName, string firstName, string address, string phone)
+        {
+            this.ID = id;
+            this.LastName = lastName;
+            this.Firstname = firstName;
+            this.Address = address;
+            this.Phone = phone;
+        }
+    }
