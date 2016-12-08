@@ -1,4 +1,4 @@
-public List<Employee> GetEmployee(string sql)
+public List<Employee> GetEmployee(string sql)  //
         {
             Connect();
             List<Employee> list = new List<Employee>();
