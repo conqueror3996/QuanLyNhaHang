@@ -67,7 +67,7 @@ namespace QL_Nhà_Hàng
             txtDiaChi.Text = dataGridView1.Rows[index].Cells[3].Value.ToString();
             txtSDT.Text = dataGridView1.Rows[index].Cells[4].Value.ToString();
         }
-        string insert;
+        
         private void btbThem_Click_1(object sender, EventArgs e)
         {
             try
