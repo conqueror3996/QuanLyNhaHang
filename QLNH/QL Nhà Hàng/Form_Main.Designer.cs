@@ -97,6 +97,7 @@
             this.quảnLíHóaĐơnToolStripMenuItem.Name = "quảnLíHóaĐơnToolStripMenuItem";
             this.quảnLíHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
             this.quảnLíHóaĐơnToolStripMenuItem.Text = "Quản lí Hóa Đơn";
+            this.quảnLíHóaĐơnToolStripMenuItem.Click += new System.EventHandler(this.quảnLíHóaĐơnToolStripMenuItem_Click);
             // 
             // lậpHóaĐơnToolStripMenuItem
             // 

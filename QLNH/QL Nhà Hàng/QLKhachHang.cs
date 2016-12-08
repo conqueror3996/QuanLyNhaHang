@@ -23,38 +23,29 @@ namespace QL_Nhà_Hàng
         {
             try
             {
-                if (cn != null && cn.State == ConnectionState.Closed)
-                {
-                    cn.Open();
-                    
-                }
+                string sql = "select * from KhachHang";
+                SqlDataAdapter da = new SqlDataAdapter(sql, cn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0];
             }
             catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message);
-                //throw;
+                MessageBox.Show("Loi Ket Noi" + ex.Message);
             }
-        }
-        private void Disconnect()
-        {
-            try
+            finally
             {
-                if (cn != null && cn.State == ConnectionState.Open)
-                    cn.Close();
+                cn.Close();
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-                //throw;
-            }
-        }
+        }         
+       
         private List<KhachHang> GetKhachHang(string sql)
         {
-            Connect();
+            cn.Open() ;
             List<KhachHang> list = new List<KhachHang>();
             try
             {
-                //string sql = "SELECT * FROM KhachHang";
+                //sql = "SELECT * FROM KhachHang";
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 SqlDataReader dr = cmd.ExecuteReader();
                 
@@ -80,7 +71,7 @@ namespace QL_Nhà_Hàng
             }
             finally
             {
-                Disconnect();
+                cn.Close();
             }
             return list;
         }
@@ -90,7 +81,7 @@ namespace QL_Nhà_Hàng
             cn = new SqlConnection(cnStr);
             try
             {
-                string sql = "select * from KhachHang";
+                string sql = "SELECT * FROM KhachHang";
                 SqlDataAdapter da = new SqlDataAdapter(sql, cn);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -99,15 +90,20 @@ namespace QL_Nhà_Hàng
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
-                //throw;
+                throw;
             }
             
         }
        
         private void btnTim_Click_1(object sender, EventArgs e)
         {
-            
-            string sql = "SELECT * FROM KhachHang WHERE TenKH LIKE  '%" + txtTen.Text + "%'"; 
+
+            string sql = "SELECT * FROM KhachHang WHERE";
+            if (radMa.Checked == true)
+                sql += " MaKH LIKE '%" + txtNhap.Text + "%'";
+            else 
+                sql += " TenKH LIKE  '%" + txtNhap.Text + "%'";
+           
             dataGridView1.DataSource = GetKhachHang(sql);
         }
 
@@ -126,15 +122,12 @@ namespace QL_Nhà_Hàng
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            DialogResult trove = new DialogResult();
-            trove = MessageBox.Show("Bạn muốn quay lại? ", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (trove == DialogResult.Yes)
-            {
+            
                 this.Hide();
                 Form_Main form2 = new Form_Main();
                 form2.ShowDialog();
                 this.Close();
-            }
+            
         }
         
         private void btnThem_Click(object sender, EventArgs e)
@@ -142,12 +135,12 @@ namespace QL_Nhà_Hàng
             
              try
             {
-                
+                cn.Open();
                 string Insert = "Insert into KhachHang(MaKH, TenKH, DiaChi, DienThoai, Fax) values('" + txtMaKH.Text + "','" + txtTen.Text +"','" +txtDiaChi.Text + "','" + txtDienThoai.Text + "','" + txtFax.Text+ "')";
                 SqlCommand cmdadd = new SqlCommand(Insert, cn);
-                Connect();
-                cmdadd.ExecuteNonQuery();
                 
+                cmdadd.ExecuteNonQuery();
+                Connect();
                 MessageBox.Show("Them Thanh Cong ", "Thông Báo");
             }
             catch (SqlException ex)
@@ -157,7 +150,7 @@ namespace QL_Nhà_Hàng
             }
             finally
             {
-                Disconnect();
+                cn.Close();
             }
         
         }
@@ -167,12 +160,12 @@ namespace QL_Nhà_Hàng
             
             try
             {
-                
+                cn.Open();
                 string Delete = "Delete KhachHang WHERE TenKH ='" + txtTen.Text + "'";
                 SqlCommand cmddel = new SqlCommand(Delete, cn);
-                Connect();
-                cmddel.ExecuteNonQuery();
                 
+                cmddel.ExecuteNonQuery();
+                Connect();
                 MessageBox.Show("Xóa Thành Công ", "Thông Báo");
 
                 
@@ -184,7 +177,7 @@ namespace QL_Nhà_Hàng
             }
             finally
             {
-                Disconnect();
+                cn.Close();
             }
         }
 
@@ -192,12 +185,12 @@ namespace QL_Nhà_Hàng
         {
             try
             {
-                
+                cn.Open();
                 string Update = "update KhachHang set TenKH ='" + txtTen.Text + "',DiaChi='" + txtDiaChi.Text + "',DienThoai='" + txtDienThoai.Text + "',Fax='" + txtFax.Text + "' where MaKH='" + txtMaKH.Text + "'";
                 SqlCommand cmdUpdate = new SqlCommand(Update, cn);
-                Connect();
-                cmdUpdate.ExecuteNonQuery();
                 
+                cmdUpdate.ExecuteNonQuery();
+                Connect();
                 MessageBox.Show("Sua Thanh Cong ", "Thông Báo");
             }
             catch (SqlException ex)
@@ -207,7 +200,7 @@ namespace QL_Nhà_Hàng
             }
             finally
             {
-                Disconnect();
+                cn.Close();
             }
         }
 
@@ -218,8 +211,12 @@ namespace QL_Nhà_Hàng
             DataSet ds = new DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
+            radMa.Checked = false;
+            radTen.Checked = false;
+            txtNhap.Text = " ";
         }
 
+       
         
 
         

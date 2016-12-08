@@ -49,8 +49,14 @@ namespace QL_Nhà_Hàng
 
         private void quảnLíKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            QLKhachHang formQLNV = new QLKhachHang();
-            formQLNV.ShowDialog();
+            QLKhachHang formQLKH = new QLKhachHang();
+            formQLKH.ShowDialog();
+        }
+
+        private void quảnLíHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QLHoaDon formQLHD = new QLHoaDon();
+            formQLHD.ShowDialog();
         }
 
       

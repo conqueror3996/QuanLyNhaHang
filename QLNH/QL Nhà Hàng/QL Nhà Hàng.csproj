@@ -55,7 +55,14 @@
     <Compile Include="Form_Thêm.Designer.cs">
       <DependentUpon>Form_Thêm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoaDon.cs" />
     <Compile Include="KhachHang.cs" />
+    <Compile Include="QLHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLHoaDon.designer.cs">
+      <DependentUpon>QLHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +91,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Thêm.resx">
       <DependentUpon>Form_Thêm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLHoaDon.resx">
+      <DependentUpon>QLHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLKhachHang.resx">
       <DependentUpon>QLKhachHang.cs</DependentUpon>
