@@ -197,7 +197,11 @@ namespace QL_Nhà_Hàng
             SqlDataAdapter da = new SqlDataAdapter(sql, cn);
             DataSet ds = new DataSet();
             da.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];     
+            dataGridView1.DataSource = ds.Tables[0];
+            radioHo.Checked = false;
+            radioMa.Checked = false;
+            radioTen.Checked = false;
+            txtSearch.Text = " ";
 
         }
 
