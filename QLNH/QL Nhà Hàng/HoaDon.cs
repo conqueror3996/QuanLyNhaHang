@@ -15,13 +15,13 @@ namespace QL_Nhà_Hàng
         public DateTime NgayGiaoHang { get; set; }
 
         //
-        public HoaDon(string MaHD, string MaKH, int MaNV, DateTime NgayLapHD, DateTime NgayGiaoHang)
+        public HoaDon(string mahd, string makh, int manv, DateTime ngaylaphd, DateTime ngaygiaohang)
         {
-            this.MaHD = MaHD;
-            this.MaKH = MaKH;
-            this.MaNV = MaNV ;
-            this.NgayLapHD = NgayLapHD;
-            this.NgayGiaoHang = NgayGiaoHang;
+            this.MaHD = mahd;
+            this.MaKH = makh;
+            this.MaNV = manv ;
+            this.NgayLapHD = ngaylaphd;
+            this.NgayGiaoHang = ngaygiaohang;
         }
     }
 }

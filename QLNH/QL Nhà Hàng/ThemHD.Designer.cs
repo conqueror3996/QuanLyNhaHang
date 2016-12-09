@@ -1,6 +1,6 @@
 ﻿namespace QL_Nhà_Hàng
 {
-    partial class QLHoaDon
+    partial class ThemHD
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboMaKH = new System.Windows.Forms.ComboBox();
+            this.comboMaNV = new System.Windows.Forms.ComboBox();
+            this.txtMaHD = new System.Windows.Forms.TextBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
-            this.txtMaKH = new System.Windows.Forms.TextBox();
-            this.cboOrderID = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,33 +40,53 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btmSuaHD = new System.Windows.Forms.Button();
-            this.btmXoaHD = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboMaKH);
+            this.groupBox1.Controls.Add(this.comboMaNV);
+            this.groupBox1.Controls.Add(this.txtMaHD);
             this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.txtMaNV);
-            this.groupBox1.Controls.Add(this.txtMaKH);
-            this.groupBox1.Controls.Add(this.cboOrderID);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(20, 17);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(541, 134);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hoa Don";
+            // 
+            // comboMaKH
+            // 
+            this.comboMaKH.FormattingEnabled = true;
+            this.comboMaKH.Location = new System.Drawing.Point(125, 62);
+            this.comboMaKH.Name = "comboMaKH";
+            this.comboMaKH.Size = new System.Drawing.Size(144, 21);
+            this.comboMaKH.TabIndex = 13;
+            // 
+            // comboMaNV
+            // 
+            this.comboMaNV.FormattingEnabled = true;
+            this.comboMaNV.Location = new System.Drawing.Point(125, 97);
+            this.comboMaNV.Name = "comboMaNV";
+            this.comboMaNV.Size = new System.Drawing.Size(144, 21);
+            this.comboMaNV.TabIndex = 12;
+            // 
+            // txtMaHD
+            // 
+            this.txtMaHD.Location = new System.Drawing.Point(125, 26);
+            this.txtMaHD.Name = "txtMaHD";
+            this.txtMaHD.Size = new System.Drawing.Size(144, 20);
+            this.txtMaHD.TabIndex = 11;
             // 
             // dateTimePicker2
             // 
@@ -77,37 +97,14 @@
             this.dateTimePicker2.TabIndex = 10;
             this.dateTimePicker2.Value = new System.DateTime(2016, 9, 12, 16, 23, 0, 0);
             // 
-            // txtMaNV
-            // 
-            this.txtMaNV.Location = new System.Drawing.Point(387, 41);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(135, 20);
-            this.txtMaNV.TabIndex = 9;
-            // 
-            // txtMaKH
-            // 
-            this.txtMaKH.Location = new System.Drawing.Point(125, 63);
-            this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(144, 20);
-            this.txtMaKH.TabIndex = 8;
-            // 
-            // cboOrderID
-            // 
-            this.cboOrderID.FormattingEnabled = true;
-            this.cboOrderID.Location = new System.Drawing.Point(125, 29);
-            this.cboOrderID.Name = "cboOrderID";
-            this.cboOrderID.Size = new System.Drawing.Size(144, 21);
-            this.cboOrderID.TabIndex = 7;
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(125, 97);
+            this.dateTimePicker1.Location = new System.Drawing.Point(387, 23);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(144, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(135, 20);
             this.dateTimePicker1.TabIndex = 5;
             this.dateTimePicker1.Value = new System.DateTime(2016, 9, 12, 16, 22, 0, 0);
-            this.dateTimePicker1.Validating += new System.ComponentModel.CancelEventHandler(this.dateTimePicker1_Validating);
             // 
             // label5
             // 
@@ -121,16 +118,17 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(302, 44);
+            this.label4.Location = new System.Drawing.Point(29, 105);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Mã NV";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 104);
+            this.label3.Location = new System.Drawing.Point(309, 26);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 2;
@@ -157,75 +155,43 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 165);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 195);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(540, 174);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(363, 362);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(101, 27);
-            this.btnLuu.TabIndex = 2;
-            this.btnLuu.Text = "Cập Nhật";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Location = new System.Drawing.Point(470, 362);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(110, 26);
-            this.btnHuy.TabIndex = 3;
-            this.btnHuy.Text = "Huy";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            this.dataGridView1.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(38, 363);
+            this.button1.Location = new System.Drawing.Point(155, 152);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 27);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Thêm Hóa Đơn";
+            this.button1.Size = new System.Drawing.Size(75, 31);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btmSuaHD
+            // button2
             // 
-            this.btmSuaHD.Location = new System.Drawing.Point(145, 363);
-            this.btmSuaHD.Name = "btmSuaHD";
-            this.btmSuaHD.Size = new System.Drawing.Size(101, 27);
-            this.btmSuaHD.TabIndex = 5;
-            this.btmSuaHD.Text = "Sửa Hóa Đơn";
-            this.btmSuaHD.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(310, 152);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 31);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Thoát";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btmXoaHD
-            // 
-            this.btmXoaHD.Location = new System.Drawing.Point(256, 362);
-            this.btmXoaHD.Name = "btmXoaHD";
-            this.btmXoaHD.Size = new System.Drawing.Size(101, 27);
-            this.btmXoaHD.TabIndex = 6;
-            this.btmXoaHD.Text = "Xóa Hóa Đơn";
-            this.btmXoaHD.UseVisualStyleBackColor = true;
-            this.btmXoaHD.Click += new System.EventHandler(this.btmXoaHD_Click);
-            // 
-            // QLHoaDon
+            // ThemHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 407);
-            this.Controls.Add(this.btmXoaHD);
-            this.Controls.Add(this.btmSuaHD);
+            this.ClientSize = new System.Drawing.Size(575, 397);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnHuy);
-            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
-            this.Name = "QLHoaDon";
-            this.Text = "HoaDon";
-            this.Load += new System.EventHandler(this.HoaDon_Load);
+            this.Name = "ThemHD";
+            this.Text = "ThemHD";
+            this.Load += new System.EventHandler(this.ThemHD_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -236,21 +202,20 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox txtMaNV;
-        private System.Windows.Forms.TextBox txtMaKH;
-        private System.Windows.Forms.ComboBox cboOrderID;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtMaHD;
+        private System.Windows.Forms.ComboBox comboMaNV;
+        private System.Windows.Forms.ComboBox comboMaKH;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btmSuaHD;
-        private System.Windows.Forms.Button btmXoaHD;
+        private System.Windows.Forms.Button button2;
+
+
     }
 }

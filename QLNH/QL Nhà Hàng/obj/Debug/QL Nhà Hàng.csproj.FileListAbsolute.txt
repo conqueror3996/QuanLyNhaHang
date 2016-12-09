@@ -41,3 +41,15 @@ C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\bin\Debug\QL Nhà Hàng.e
 C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL Nhà Hàng.exe
 C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL Nhà Hàng.pdb
 C:\Users\Admin\Desktop\BTQLNH\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.QLHoaDon.resources
+C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\bin\Debug\QL Nhà Hàng.exe
+C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\bin\Debug\QL Nhà Hàng.pdb
+C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL Nhà Hàng.csprojResolveAssemblyReference.cache
+C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.Form_Thêm.resources
+C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.QLHoaDon.resources
+C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.QLKhachHang.resources
+C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.QLNhanVien.resources
+C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.Form_Main.resources
+C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.Login.resources
+C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.Properties.Resources.resources
+C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL Nhà Hàng.csproj.GenerateResource.Cache
+C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.ThemHD.resources

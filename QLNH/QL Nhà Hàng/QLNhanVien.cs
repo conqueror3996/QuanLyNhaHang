@@ -116,7 +116,7 @@ namespace QL_Nhà_Hàng
             try
             {
                 cn.Open();
-                update = "update Nhanvien set HoNV ='"+txtHo.Text+"',Ten='"+txtTen.Text+"',Diachi='"+txtDiaChi.Text+"',Dienthoai='"+txtSDT.Text+"' where MaNV='" + txtMaNV.Text + "'";
+                update = "update Nhanvien set HoNV =N'"+txtHo.Text+"',Ten=N'"+txtTen.Text+"',Diachi=N'"+txtDiaChi.Text+"',Dienthoai='"+txtSDT.Text+"' where MaNV='" + txtMaNV.Text + "'";
                 SqlCommand cmdUpdate = new SqlCommand(update, cn);
                 cmdUpdate.ExecuteNonQuery();
                 connect();
@@ -209,12 +209,16 @@ namespace QL_Nhà_Hàng
 
         private void btmTroVe_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
-            Form_Main form2 = new Form_Main();
-            form2.ShowDialog();
+         
             this.Close();
            
         }
+
+       
+
+  
+
+    
    
        
     }
