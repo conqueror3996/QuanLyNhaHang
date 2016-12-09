@@ -123,9 +123,7 @@ namespace QL_Nhà_Hàng
         private void btnThoat_Click(object sender, EventArgs e)
         {
             
-                this.Hide();
-                Form_Main form2 = new Form_Main();
-                form2.ShowDialog();
+                
                 this.Close();
             
         }

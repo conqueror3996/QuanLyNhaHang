@@ -89,6 +89,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThemHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemHD.Designer.cs">
+      <DependentUpon>ThemHD.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form_Thêm.resx">
       <DependentUpon>Form_Thêm.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +122,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ThemHD.resx">
+      <DependentUpon>ThemHD.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

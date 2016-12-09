@@ -53,7 +53,7 @@ namespace QL_Nhà_Hàng
             else
             {
                 cn.Open();
-                insert = "Insert into NhanVien(HoNV,Ten,DiaChi,DienThoai) values('" + txtHo.Text + "','" + txtTen.Text + "','" + txtDiaChi.Text + "','" + txtSDT.Text + "')";
+                insert = "Insert into NhanVien(HoNV,Ten,DiaChi,DienThoai) values(N'" + txtHo.Text + "',N'" + txtTen.Text + "',N'" + txtDiaChi.Text + "','" + txtSDT.Text + "')";
                 SqlCommand cmdthem = new SqlCommand(insert, cn);
                 cmdthem.ExecuteNonQuery();
                 connect();

@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using System.Configuration;
+using System.Data.SqlClient;
+using System.Globalization;
 namespace QL_Nhà_Hàng
 {
     public partial class QLHoaDon : Form
@@ -16,21 +17,21 @@ namespace QL_Nhà_Hàng
         String cnStr;
         SqlConnection cn;
         DataSet ds;
-        DataTable Orders=new DataTable();
+        DataTable Orders = new DataTable();
         public QLHoaDon()
         {
             InitializeComponent();
         }
 
-        
-        
+
+
 
         public DataSet GetDataset(string sql)
         {
             try
             {
-
-                 sql = "SELECT * FROM HoaDon";
+                cn.Open();
+                //sql = "SELECT * FROM HoaDon";
                 SqlDataAdapter da = new SqlDataAdapter(sql, cn);
                 /*DataSet*/
                 ds = new DataSet();
@@ -41,27 +42,121 @@ namespace QL_Nhà_Hàng
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
-                return null;
+
                 //throw;
             }
             finally
             {
                 cn.Close();
             }
+            return null;
         }
         private void HoaDon_Load(object sender, EventArgs e)
         {
             cnStr = ConfigurationManager.ConnectionStrings["cnStr"].ConnectionString;
             cn = new SqlConnection(cnStr);
-            string sql = "SELECT * FROM HoaDon";
-            Orders = GetDataset(sql).Tables[0];
 
-            cboOrderID.DataSource = Orders;
+            string sql = "select * from HoaDon";
+            SqlDataAdapter da = new SqlDataAdapter(sql, cn);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            Orders = ds.Tables[0];
+            cboOrderID.DataSource = ds.Tables[0]; 
             cboOrderID.DisplayMember = "MaHD";
             cboOrderID.ValueMember = "MaHD";
 
+
+
             txtMaNV.DataBindings.Add("Text", Orders, "MaNV");
             txtMaKH.DataBindings.Add("Text", Orders, "MaKH");
+            dateTimePicker1.DataBindings.Add("Text", Orders, "NgayLapHD", true, DataSourceUpdateMode.OnValidation, "", "dd-MM-yyyy");
+            dateTimePicker2.DataBindings.Add("Text", Orders, "NgayGiaoHang", true, DataSourceUpdateMode.OnValidation, "", "dd-MM-yyyy");
+            
         }
+
+        //private void dataGridView1_Click(object sender, EventArgs e)
+        //{
+        //    int index;
+        //    index = dataGridView1.CurrentRow.Index;
+        //    dateTimePicker1.Text = dataGridView1.Rows[index].Cells[3].Value.ToString();
+        //    dateTimePicker2.Text = dataGridView1.Rows[index].Cells[4].Value.ToString();
+        //}
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+           
+                hienthiHD();
+    
+          
+          
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
+        }
+
+        private void dateTimePicker1_Validating(object sender, CancelEventArgs e)
+        {
+            DateTime dateValue;
+
+            if (!String.IsNullOrEmpty(dateTimePicker1.Text))
+            {
+                if (DateTime.TryParseExact(dateTimePicker1.Text, "dd-MM-yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out dateValue))
+                    dateTimePicker1.Text = String.Format("{0:MM/dd/yyyy}", dateValue);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ThemHD themHD = new ThemHD();
+            themHD.Show();
+          
+
+        }
+
+      public void hienthiHD()
+        {
+            string sql = "select * from HoaDon";
+            SqlDataAdapter da = new SqlDataAdapter(sql, cn);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+
+        }
+
+      private void btmXoaHD_Click(object sender, EventArgs e)
+      {
+          try
+          {
+              cn.Open();
+              
+              string xoa = "delete HoaDon where MaHD='" + cboOrderID.SelectedValue.ToString() + "'";
+              SqlCommand cmdxoa = new SqlCommand(xoa, cn);
+              cmdxoa.ExecuteNonQuery();
+              hienthiHD();
+              MessageBox.Show("Xoa Thanh Cong ", "Thông Báo");
+
+          }
+          catch (SqlException ex)
+          {
+              MessageBox.Show("Loi Xoa", "thong Bao\n" + ex.Message);
+          }
+          finally
+          {
+              cn.Close();
+          }
+      }
+
+     
+     
+
+
+
+
+
+
     }
 }
