@@ -32,8 +32,8 @@
             this.comboMaKH = new System.Windows.Forms.ComboBox();
             this.comboMaNV = new System.Windows.Forms.ComboBox();
             this.txtMaHD = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTime2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTime1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,8 +51,8 @@
             this.groupBox1.Controls.Add(this.comboMaKH);
             this.groupBox1.Controls.Add(this.comboMaNV);
             this.groupBox1.Controls.Add(this.txtMaHD);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dateTime2);
+            this.groupBox1.Controls.Add(this.dateTime1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -88,23 +88,25 @@
             this.txtMaHD.Size = new System.Drawing.Size(144, 20);
             this.txtMaHD.TabIndex = 11;
             // 
-            // dateTimePicker2
+            // dateTime2
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(387, 97);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(135, 20);
-            this.dateTimePicker2.TabIndex = 10;
-            this.dateTimePicker2.Value = new System.DateTime(2016, 9, 12, 16, 23, 0, 0);
+            this.dateTime2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTime2.Location = new System.Drawing.Point(387, 97);
+            this.dateTime2.Name = "dateTime2";
+            this.dateTime2.Size = new System.Drawing.Size(135, 20);
+            this.dateTime2.TabIndex = 10;
+            this.dateTime2.Value = new System.DateTime(2016, 9, 12, 16, 23, 0, 0);
+            this.dateTime2.Validating += new System.ComponentModel.CancelEventHandler(this.dateTime2_Validating);
             // 
-            // dateTimePicker1
+            // dateTime1
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(387, 23);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(135, 20);
-            this.dateTimePicker1.TabIndex = 5;
-            this.dateTimePicker1.Value = new System.DateTime(2016, 9, 12, 16, 22, 0, 0);
+            this.dateTime1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTime1.Location = new System.Drawing.Point(387, 23);
+            this.dateTime1.Name = "dateTime1";
+            this.dateTime1.Size = new System.Drawing.Size(135, 20);
+            this.dateTime1.TabIndex = 5;
+            this.dateTime1.Value = new System.DateTime(2016, 9, 12, 16, 22, 0, 0);
+            this.dateTime1.Validating += new System.ComponentModel.CancelEventHandler(this.dateTime1_Validating_1);
             // 
             // label5
             // 
@@ -202,8 +204,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTime2;
+        private System.Windows.Forms.DateTimePicker dateTime1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
