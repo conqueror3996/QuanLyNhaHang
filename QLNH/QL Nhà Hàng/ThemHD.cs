@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,17 @@ namespace QL_Nhà_Hàng
             LoadMaNV();
             LoadMaKH();
             hienThiHD();
+
+            string sql = "select * from HoaDon";
+            SqlDataAdapter da = new SqlDataAdapter(sql, cn);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            //Orderss = ds.Tables[0];
+
+            dateTime1.DataBindings.Add("Text", ds.Tables[0], "NgayLapHD", true, DataSourceUpdateMode.OnValidation, "", "dd-MM-yyyy");
+            dateTime2.DataBindings.Add("Text", ds.Tables[0], "NgayGiaoHang", true, DataSourceUpdateMode.OnValidation, "", "dd-MM-yyyy");
+
         }
         private void hienThiHD()
         {
@@ -81,11 +93,12 @@ namespace QL_Nhà_Hàng
             comboMaNV.DisplayMember = "MaNV";
             comboMaNV.ValueMember = "MaNV";
             comboMaNV.Enabled = true;
+        
             cmdd.ExecuteNonQuery();
             cn.Close();
 
         }
-
+       
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -95,9 +108,9 @@ namespace QL_Nhà_Hàng
                     MessageBox.Show("Ban Chưa Nhập Thong Tin Hóa Đơn", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
-                {
-                  
-                    string insert = "insert into HoaDon(MaHD,MaKH,MaNV,NgayLapHD,NgayGiaoHang) values ('" + txtMaHD.Text + "','" + comboMaKH.SelectedValue.ToString() + "','" + comboMaNV.SelectedValue.ToString() + "','" + dateTimePicker1.Value.Date + "','" + dateTimePicker2.Value.Date + "')";
+                {   
+
+                    string insert = "insert into HoaDon(MaHD,MaKH,MaNV,NgayLapHD,NgayGiaoHang) values ('" + txtMaHD.Text + "','" + comboMaKH.SelectedValue.ToString() + "','" + comboMaNV.SelectedValue.ToString() + "','" + dateTime1.Text + "','" + dateTime2.Text + "')";
                     SqlCommand cmdthem = new SqlCommand(insert, cn);
                     cn.Open();
                     cmdthem.ExecuteNonQuery();
@@ -121,14 +134,34 @@ namespace QL_Nhà_Hàng
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-            QLHoaDon QLHD = new QLHoaDon();
-            QLHD.Show();
+          
             
         }
-      
 
-      
 
+        private void dateTime1_Validating_1(object sender, CancelEventArgs e)
+        {
+            DateTime dateValue;
+
+            if (!String.IsNullOrEmpty(dateTime1.Text))
+            {
+                if (DateTime.TryParseExact(dateTime1.Text, "dd-MM-yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out dateValue))
+                    dateTime1.Text = String.Format("{0:dd/MM/yyyy}", dateValue);
+            }
+        }
+
+        private void dateTime2_Validating(object sender, CancelEventArgs e)
+        {
+            DateTime dateValue2;
+
+            if (!String.IsNullOrEmpty(dateTime2.Text))
+            {
+                if (DateTime.TryParseExact(dateTime2.Text, "dd-MM-yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out dateValue2))
+                    dateTime2.Text = String.Format("{0:dd/MM/yyyy}", dateValue2);
+            }
+        }
+
+       
        
     }
 }
