@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLNhanVien));
             this.btbThem = new System.Windows.Forms.Button();
             this.ho = new System.Windows.Forms.Label();
             this.dc = new System.Windows.Forms.Label();
@@ -52,10 +53,11 @@
             this.radioHo = new System.Windows.Forms.RadioButton();
             this.bmtSearch = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btmCapNhat = new System.Windows.Forms.Button();
             this.btmThoat = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btbThem
@@ -164,7 +166,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(577, 294);
             this.dataGridView1.TabIndex = 12;
-//            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // label5
@@ -197,7 +198,7 @@
             // 
             // btmTroVe
             // 
-            this.btmTroVe.Location = new System.Drawing.Point(683, 403);
+            this.btmTroVe.Location = new System.Drawing.Point(661, 387);
             this.btmTroVe.Name = "btmTroVe";
             this.btmTroVe.Size = new System.Drawing.Size(111, 55);
             this.btmTroVe.TabIndex = 16;
@@ -270,16 +271,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // btmCapNhat
-            // 
-            this.btmCapNhat.Location = new System.Drawing.Point(734, 147);
-            this.btmCapNhat.Name = "btmCapNhat";
-            this.btmCapNhat.Size = new System.Drawing.Size(111, 55);
-            this.btmCapNhat.TabIndex = 24;
-            this.btmCapNhat.Text = "Cập Nhật";
-            this.btmCapNhat.UseVisualStyleBackColor = true;
-            this.btmCapNhat.Click += new System.EventHandler(this.button2_Click);
-            // 
             // btmThoat
             // 
             this.btmThoat.Location = new System.Drawing.Point(758, 303);
@@ -290,12 +281,24 @@
             this.btmThoat.UseVisualStyleBackColor = true;
             this.btmThoat.Click += new System.EventHandler(this.btmThoat_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(758, 125);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(91, 89);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // QLNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 540);
-            this.Controls.Add(this.btmCapNhat);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bmtSearch);
             this.Controls.Add(this.radioHo);
             this.Controls.Add(this.radioTen);
@@ -324,6 +327,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,8 +358,8 @@
         private System.Windows.Forms.RadioButton radioHo;
         private System.Windows.Forms.Button bmtSearch;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Button btmCapNhat;
         private System.Windows.Forms.Button btmThoat;
+        private System.Windows.Forms.PictureBox pictureBox1;
 
 
     }
