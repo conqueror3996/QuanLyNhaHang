@@ -198,10 +198,17 @@ namespace QL_Nhà_Hàng
             DataSet ds = new DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
-            radioHo.Checked = false;
-            radioMa.Checked = false;
-            radioTen.Checked = false;
-            txtSearch.Text = " ";
+
+                radioHo.Checked = false;
+                radioMa.Checked = false;
+                radioTen.Checked = false;
+                txtSearch.Text = " ";
+                txtMaNV.Text = " ";
+                txtHo.Text = " ";
+                txtDiaChi.Text = " ";
+                txtTen.Text = " ";
+                txtSDT.Text = " ";
+
 
         }
 
