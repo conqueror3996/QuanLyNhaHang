@@ -40,6 +40,7 @@
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trởVềToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.quảnLýThựcĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -67,11 +68,12 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quảnLíNhânViênToolStripMenuItem,
             this.quảnLíKháchHàngToolStripMenuItem,
-            this.quảnLíHóaĐơnToolStripMenuItem,
+            this.quảnLýThựcĐơnToolStripMenuItem,
             this.lậpHóaĐơnToolStripMenuItem,
+            this.quảnLíHóaĐơnToolStripMenuItem,
             this.inBáoCáoToolStripMenuItem,
-            this.thoátToolStripMenuItem,
-            this.trởVềToolStripMenuItem});
+            this.trởVềToolStripMenuItem,
+            this.thoátToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(993, 24);
@@ -134,6 +136,13 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // quảnLýThựcĐơnToolStripMenuItem
+            // 
+            this.quảnLýThựcĐơnToolStripMenuItem.Name = "quảnLýThựcĐơnToolStripMenuItem";
+            this.quảnLýThựcĐơnToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
+            this.quảnLýThựcĐơnToolStripMenuItem.Text = "Quản lý Thực Đơn";
+            this.quảnLýThựcĐơnToolStripMenuItem.Click += new System.EventHandler(this.quảnLýThựcĐơnToolStripMenuItem_Click);
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,5 +176,6 @@
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trởVềToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem quảnLýThựcĐơnToolStripMenuItem;
     }
 }

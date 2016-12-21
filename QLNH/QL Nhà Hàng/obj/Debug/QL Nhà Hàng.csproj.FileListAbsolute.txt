@@ -53,3 +53,5 @@ C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.L
 C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.Properties.Resources.resources
 C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL Nhà Hàng.csproj.GenerateResource.Cache
 C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.ThemHD.resources
+C:\Users\Admin\Desktop\BTQLNH\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.ThemHD.resources
+C:\Users\Admin\Desktop\BTQLNH\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.QLThucDon.resources
