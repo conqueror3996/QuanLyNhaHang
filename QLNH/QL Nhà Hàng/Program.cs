@@ -19,6 +19,7 @@ namespace QL_Nhà_Hàng
             //Application.Run(new QLNhanVien());
            // Application.Run(new Login());
             Application.Run(new Form_Main());
+            //Application.Run(new rptHD());
            // Application.Run(new QLHoaDon());
         }
     }

@@ -65,6 +65,18 @@ namespace QL_Nhà_Hàng
             fromQLTD.ShowDialog();
         }
 
+        private void reportKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rptKH rptKH = new rptKH();
+            rptKH.Show();
+        }
+
+        private void reportHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rptHD rptHD = new rptHD();
+            rptHD.Show();
+        }
+
       
        
     }
