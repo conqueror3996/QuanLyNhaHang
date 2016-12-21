@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBoxMaKH = new System.Windows.Forms.ComboBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.txtMaHD = new System.Windows.Forms.TextBox();
-            this.comboMaNV = new System.Windows.Forms.ComboBox();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.txtMaKH = new System.Windows.Forms.TextBox();
+            this.cboOrderID = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btmSuaHD = new System.Windows.Forms.Button();
@@ -50,10 +51,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBoxMaKH);
             this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.txtMaHD);
-            this.groupBox1.Controls.Add(this.comboMaNV);
+            this.groupBox1.Controls.Add(this.txtMaNV);
+            this.groupBox1.Controls.Add(this.txtMaKH);
+            this.groupBox1.Controls.Add(this.cboOrderID);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -67,14 +68,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hoa Don";
             // 
-            // comboBoxMaKH
-            // 
-            this.comboBoxMaKH.FormattingEnabled = true;
-            this.comboBoxMaKH.Location = new System.Drawing.Point(125, 67);
-            this.comboBoxMaKH.Name = "comboBoxMaKH";
-            this.comboBoxMaKH.Size = new System.Drawing.Size(144, 21);
-            this.comboBoxMaKH.TabIndex = 11;
-            // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -83,31 +76,37 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(135, 20);
             this.dateTimePicker2.TabIndex = 10;
             this.dateTimePicker2.Value = new System.DateTime(2016, 9, 12, 16, 23, 0, 0);
-            this.dateTimePicker2.Validating += new System.ComponentModel.CancelEventHandler(this.dateTimePicker2_Validating);
             // 
-            // txtMaHD
+            // txtMaNV
             // 
-            this.txtMaHD.Location = new System.Drawing.Point(125, 19);
-            this.txtMaHD.Name = "txtMaHD";
-            this.txtMaHD.Size = new System.Drawing.Size(135, 20);
-            this.txtMaHD.TabIndex = 9;
+            this.txtMaNV.Location = new System.Drawing.Point(387, 41);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(135, 20);
+            this.txtMaNV.TabIndex = 9;
             // 
-            // comboMaNV
+            // txtMaKH
             // 
-            this.comboMaNV.FormattingEnabled = true;
-            this.comboMaNV.Location = new System.Drawing.Point(367, 36);
-            this.comboMaNV.Name = "comboMaNV";
-            this.comboMaNV.Size = new System.Drawing.Size(144, 21);
-            this.comboMaNV.TabIndex = 7;
+            this.txtMaKH.Location = new System.Drawing.Point(125, 63);
+            this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.Size = new System.Drawing.Size(144, 20);
+            this.txtMaKH.TabIndex = 8;
+            // 
+            // cboOrderID
+            // 
+            this.cboOrderID.FormattingEnabled = true;
+            this.cboOrderID.Location = new System.Drawing.Point(125, 29);
+            this.cboOrderID.Name = "cboOrderID";
+            this.cboOrderID.Size = new System.Drawing.Size(144, 21);
+            this.cboOrderID.TabIndex = 7;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(125, 97);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(144, 20);
             this.dateTimePicker1.TabIndex = 5;
-            this.dateTimePicker1.Value = new System.DateTime(2016, 12, 18, 0, 0, 0, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2016, 9, 12, 16, 22, 0, 0);
             this.dateTimePicker1.Validating += new System.ComponentModel.CancelEventHandler(this.dateTimePicker1_Validating);
             // 
             // label5
@@ -162,13 +161,22 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(540, 174);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(363, 362);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(101, 27);
+            this.btnLuu.TabIndex = 2;
+            this.btnLuu.Text = "Cập Nhật";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(449, 345);
+            this.btnHuy.Location = new System.Drawing.Point(470, 362);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(111, 44);
+            this.btnHuy.Size = new System.Drawing.Size(110, 26);
             this.btnHuy.TabIndex = 3;
             this.btnHuy.Text = "Huy";
             this.btnHuy.UseVisualStyleBackColor = true;
@@ -176,9 +184,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(38, 345);
+            this.button1.Location = new System.Drawing.Point(38, 363);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 45);
+            this.button1.Size = new System.Drawing.Size(101, 27);
             this.button1.TabIndex = 4;
             this.button1.Text = "Thêm Hóa Đơn";
             this.button1.UseVisualStyleBackColor = true;
@@ -186,19 +194,18 @@
             // 
             // btmSuaHD
             // 
-            this.btmSuaHD.Location = new System.Drawing.Point(161, 345);
+            this.btmSuaHD.Location = new System.Drawing.Point(145, 363);
             this.btmSuaHD.Name = "btmSuaHD";
-            this.btmSuaHD.Size = new System.Drawing.Size(101, 44);
+            this.btmSuaHD.Size = new System.Drawing.Size(101, 27);
             this.btmSuaHD.TabIndex = 5;
             this.btmSuaHD.Text = "Sửa Hóa Đơn";
             this.btmSuaHD.UseVisualStyleBackColor = true;
-            this.btmSuaHD.Click += new System.EventHandler(this.btmSuaHD_Click);
             // 
             // btmXoaHD
             // 
-            this.btmXoaHD.Location = new System.Drawing.Point(287, 345);
+            this.btmXoaHD.Location = new System.Drawing.Point(256, 362);
             this.btmXoaHD.Name = "btmXoaHD";
-            this.btmXoaHD.Size = new System.Drawing.Size(101, 44);
+            this.btmXoaHD.Size = new System.Drawing.Size(101, 27);
             this.btmXoaHD.TabIndex = 6;
             this.btmXoaHD.Text = "Xóa Hóa Đơn";
             this.btmXoaHD.UseVisualStyleBackColor = true;
@@ -213,6 +220,7 @@
             this.Controls.Add(this.btmSuaHD);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Name = "QLHoaDon";
@@ -230,18 +238,19 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox txtMaHD;
-        private System.Windows.Forms.ComboBox comboMaNV;
+        private System.Windows.Forms.TextBox txtMaNV;
+        private System.Windows.Forms.TextBox txtMaKH;
+        private System.Windows.Forms.ComboBox cboOrderID;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btmSuaHD;
         private System.Windows.Forms.Button btmXoaHD;
-        private System.Windows.Forms.ComboBox comboBoxMaKH;
     }
 }

@@ -69,6 +69,12 @@
     <Compile Include="QLKhachHang.Designer.cs">
       <DependentUpon>QLKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLThucDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLThucDon.Designer.cs">
+      <DependentUpon>QLThucDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,7 @@
     <Compile Include="ThemHD.Designer.cs">
       <DependentUpon>ThemHD.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThucDon.cs" />
     <EmbeddedResource Include="Form_Thêm.resx">
       <DependentUpon>Form_Thêm.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QLKhachHang.resx">
       <DependentUpon>QLKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLThucDon.resx">
+      <DependentUpon>QLThucDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLNhanVien.resx">
       <DependentUpon>QLNhanVien.cs</DependentUpon>

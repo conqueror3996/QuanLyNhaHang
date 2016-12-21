@@ -59,6 +59,12 @@ namespace QL_Nhà_Hàng
             formQLHD.ShowDialog();
         }
 
+        private void quảnLýThựcĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QLThucDon fromQLTD = new QLThucDon();
+            fromQLTD.ShowDialog();
+        }
+
       
        
     }
