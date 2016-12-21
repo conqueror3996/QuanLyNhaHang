@@ -110,7 +110,7 @@ namespace QL_Nhà_Hàng
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+           
             ThemHD themHD = new ThemHD();
             themHD.Show();
           

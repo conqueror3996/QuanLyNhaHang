@@ -121,8 +121,7 @@ namespace QL_Nhà_Hàng
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-            QLHoaDon QLHD = new QLHoaDon();
-            QLHD.Show();
+          
             
         }
       
