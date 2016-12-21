@@ -30,9 +30,6 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
-            this.txtMaKH = new System.Windows.Forms.TextBox();
-            this.cboOrderID = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,16 +42,19 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btmSuaHD = new System.Windows.Forms.Button();
             this.btmXoaHD = new System.Windows.Forms.Button();
+            this.comboMaKH = new System.Windows.Forms.ComboBox();
+            this.comboMaNV = new System.Windows.Forms.ComboBox();
+            this.txtMaHD = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtMaHD);
+            this.groupBox1.Controls.Add(this.comboMaNV);
+            this.groupBox1.Controls.Add(this.comboMaKH);
             this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.txtMaNV);
-            this.groupBox1.Controls.Add(this.txtMaKH);
-            this.groupBox1.Controls.Add(this.cboOrderID);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -77,37 +77,15 @@
             this.dateTimePicker2.TabIndex = 10;
             this.dateTimePicker2.Value = new System.DateTime(2016, 9, 12, 16, 23, 0, 0);
             // 
-            // txtMaNV
-            // 
-            this.txtMaNV.Location = new System.Drawing.Point(387, 41);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(135, 20);
-            this.txtMaNV.TabIndex = 9;
-            // 
-            // txtMaKH
-            // 
-            this.txtMaKH.Location = new System.Drawing.Point(125, 63);
-            this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(144, 20);
-            this.txtMaKH.TabIndex = 8;
-            // 
-            // cboOrderID
-            // 
-            this.cboOrderID.FormattingEnabled = true;
-            this.cboOrderID.Location = new System.Drawing.Point(125, 29);
-            this.cboOrderID.Name = "cboOrderID";
-            this.cboOrderID.Size = new System.Drawing.Size(144, 21);
-            this.cboOrderID.TabIndex = 7;
-            // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(125, 97);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(144, 20);
             this.dateTimePicker1.TabIndex = 5;
             this.dateTimePicker1.Value = new System.DateTime(2016, 9, 12, 16, 22, 0, 0);
-            this.dateTimePicker1.Validating += new System.ComponentModel.CancelEventHandler(this.dateTimePicker1_Validating);
+           // this.dateTimePicker1.Validating += new System.ComponentModel.CancelEventHandler(this.dateTimePicker1_Validating);
             // 
             // label5
             // 
@@ -161,6 +139,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(540, 174);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click_1);
             // 
             // btnLuu
             // 
@@ -200,6 +179,7 @@
             this.btmSuaHD.TabIndex = 5;
             this.btmSuaHD.Text = "Sửa Hóa Đơn";
             this.btmSuaHD.UseVisualStyleBackColor = true;
+            this.btmSuaHD.Click += new System.EventHandler(this.btmSuaHD_Click_1);
             // 
             // btmXoaHD
             // 
@@ -210,6 +190,29 @@
             this.btmXoaHD.Text = "Xóa Hóa Đơn";
             this.btmXoaHD.UseVisualStyleBackColor = true;
             this.btmXoaHD.Click += new System.EventHandler(this.btmXoaHD_Click);
+            // 
+            // comboMaKH
+            // 
+            this.comboMaKH.FormattingEnabled = true;
+            this.comboMaKH.Location = new System.Drawing.Point(125, 62);
+            this.comboMaKH.Name = "comboMaKH";
+            this.comboMaKH.Size = new System.Drawing.Size(144, 21);
+            this.comboMaKH.TabIndex = 11;
+            // 
+            // comboMaNV
+            // 
+            this.comboMaNV.FormattingEnabled = true;
+            this.comboMaNV.Location = new System.Drawing.Point(363, 29);
+            this.comboMaNV.Name = "comboMaNV";
+            this.comboMaNV.Size = new System.Drawing.Size(144, 21);
+            this.comboMaNV.TabIndex = 12;
+            // 
+            // txtMaHD
+            // 
+            this.txtMaHD.Location = new System.Drawing.Point(125, 25);
+            this.txtMaHD.Name = "txtMaHD";
+            this.txtMaHD.Size = new System.Drawing.Size(143, 20);
+            this.txtMaHD.TabIndex = 13;
             // 
             // QLHoaDon
             // 
@@ -238,9 +241,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox txtMaNV;
-        private System.Windows.Forms.TextBox txtMaKH;
-        private System.Windows.Forms.ComboBox cboOrderID;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -252,5 +252,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btmSuaHD;
         private System.Windows.Forms.Button btmXoaHD;
+        private System.Windows.Forms.ComboBox comboMaNV;
+        private System.Windows.Forms.ComboBox comboMaKH;
+        private System.Windows.Forms.TextBox txtMaHD;
     }
 }
