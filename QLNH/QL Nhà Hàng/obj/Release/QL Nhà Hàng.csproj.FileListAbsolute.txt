@@ -13,3 +13,8 @@ C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL Nhà Hàng
 C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL Nhà Hàng.exe
 C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL Nhà Hàng.pdb
 C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL Nhà Hàng.csprojResolveAssemblyReference.cache
+C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL_Nhà_Hàng.QLThucDon.resources
+C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL_Nhà_Hàng.rptHD.resources
+C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL_Nhà_Hàng.rptKH.resources
+C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\RdlCompile.cache
+C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\RdlCompile.compiled

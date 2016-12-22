@@ -214,6 +214,7 @@ namespace QL_Nhà_Hàng
             txtNhap.Text = " ";
         }
 
+      
        
         
 

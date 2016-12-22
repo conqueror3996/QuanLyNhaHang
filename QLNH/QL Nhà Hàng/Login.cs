@@ -34,7 +34,7 @@ namespace QL_Nhà_Hàng
                 
             }
            
-            else if (txtUsername.Text =="thuong" && txtPassword.Text=="123456")
+            else if (txtUsername.Text =="qlnh" && txtPassword.Text=="123456")
             {
                 MessageBox.Show("Đăng Nhập Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();

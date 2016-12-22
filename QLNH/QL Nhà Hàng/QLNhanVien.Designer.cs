@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLNhanVien));
             this.btbThem = new System.Windows.Forms.Button();
             this.ho = new System.Windows.Forms.Label();
             this.dc = new System.Windows.Forms.Label();
@@ -54,17 +55,22 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btmCapNhat = new System.Windows.Forms.Button();
             this.btmThoat = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btbThem
             // 
-            this.btbThem.Location = new System.Drawing.Point(611, 220);
+            this.btbThem.Image = ((System.Drawing.Image)(resources.GetObject("btbThem.Image")));
+            this.btbThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btbThem.Location = new System.Drawing.Point(686, 216);
             this.btbThem.Name = "btbThem";
-            this.btbThem.Size = new System.Drawing.Size(111, 55);
+            this.btbThem.Size = new System.Drawing.Size(129, 90);
             this.btbThem.TabIndex = 0;
             this.btbThem.Text = "Thêm";
+            this.btbThem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btbThem.UseVisualStyleBackColor = true;
             this.btbThem.Click += new System.EventHandler(this.btbThem_Click_1);
             // 
@@ -72,7 +78,8 @@
             // 
             this.ho.AutoSize = true;
             this.ho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.ho.Location = new System.Drawing.Point(31, 80);
+            this.ho.ForeColor = System.Drawing.Color.Red;
+            this.ho.Location = new System.Drawing.Point(9, 76);
             this.ho.Name = "ho";
             this.ho.Size = new System.Drawing.Size(96, 17);
             this.ho.TabIndex = 1;
@@ -82,7 +89,8 @@
             // 
             this.dc.AutoSize = true;
             this.dc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.dc.Location = new System.Drawing.Point(548, 54);
+            this.dc.ForeColor = System.Drawing.Color.Red;
+            this.dc.Location = new System.Drawing.Point(573, 44);
             this.dc.Name = "dc";
             this.dc.Size = new System.Drawing.Size(53, 17);
             this.dc.TabIndex = 2;
@@ -92,7 +100,8 @@
             // 
             this.ten.AutoSize = true;
             this.ten.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.ten.Location = new System.Drawing.Point(31, 113);
+            this.ten.ForeColor = System.Drawing.Color.Red;
+            this.ten.Location = new System.Drawing.Point(9, 109);
             this.ten.Name = "ten";
             this.ten.Size = new System.Drawing.Size(103, 17);
             this.ten.TabIndex = 3;
@@ -100,38 +109,39 @@
             // 
             // txtHo
             // 
-            this.txtHo.Location = new System.Drawing.Point(204, 80);
+            this.txtHo.Location = new System.Drawing.Point(211, 76);
             this.txtHo.Name = "txtHo";
-            this.txtHo.Size = new System.Drawing.Size(243, 20);
+            this.txtHo.Size = new System.Drawing.Size(283, 20);
             this.txtHo.TabIndex = 4;
             // 
             // txtTen
             // 
-            this.txtTen.Location = new System.Drawing.Point(204, 110);
+            this.txtTen.Location = new System.Drawing.Point(211, 106);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(243, 20);
+            this.txtTen.Size = new System.Drawing.Size(283, 20);
             this.txtTen.TabIndex = 5;
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(626, 41);
+            this.txtDiaChi.Location = new System.Drawing.Point(686, 43);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(243, 44);
+            this.txtDiaChi.Size = new System.Drawing.Size(283, 44);
             this.txtDiaChi.TabIndex = 6;
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(626, 99);
+            this.txtSDT.Location = new System.Drawing.Point(686, 101);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(243, 20);
+            this.txtSDT.Size = new System.Drawing.Size(283, 20);
             this.txtSDT.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label4.Location = new System.Drawing.Point(530, 99);
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(552, 89);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 17);
             this.label4.TabIndex = 8;
@@ -139,32 +149,37 @@
             // 
             // btmXoa
             // 
-            this.btmXoa.Location = new System.Drawing.Point(758, 220);
+            this.btmXoa.Image = ((System.Drawing.Image)(resources.GetObject("btmXoa.Image")));
+            this.btmXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btmXoa.Location = new System.Drawing.Point(821, 216);
             this.btmXoa.Name = "btmXoa";
-            this.btmXoa.Size = new System.Drawing.Size(111, 55);
+            this.btmXoa.Size = new System.Drawing.Size(129, 90);
             this.btmXoa.TabIndex = 9;
             this.btmXoa.Text = "Xóa";
+            this.btmXoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btmXoa.UseVisualStyleBackColor = true;
             this.btmXoa.Click += new System.EventHandler(this.btmXoa_Click);
             // 
             // btmSua
             // 
-            this.btmSua.Location = new System.Drawing.Point(611, 303);
+            this.btmSua.Image = ((System.Drawing.Image)(resources.GetObject("btmSua.Image")));
+            this.btmSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btmSua.Location = new System.Drawing.Point(686, 316);
             this.btmSua.Name = "btmSua";
-            this.btmSua.Size = new System.Drawing.Size(111, 55);
+            this.btmSua.Size = new System.Drawing.Size(129, 92);
             this.btmSua.TabIndex = 10;
             this.btmSua.Text = "Sửa";
+            this.btmSua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btmSua.UseVisualStyleBackColor = true;
             this.btmSua.Click += new System.EventHandler(this.btmSua_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 220);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 216);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(577, 294);
+            this.dataGridView1.Size = new System.Drawing.Size(668, 322);
             this.dataGridView1.TabIndex = 12;
-//            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // label5
@@ -172,7 +187,8 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(239, 9);
+            this.label5.ForeColor = System.Drawing.Color.Blue;
+            this.label5.Location = new System.Drawing.Point(349, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(208, 25);
             this.label5.TabIndex = 13;
@@ -180,16 +196,18 @@
             // 
             // txtMaNV
             // 
-            this.txtMaNV.Location = new System.Drawing.Point(204, 47);
+            this.txtMaNV.Location = new System.Drawing.Point(211, 43);
             this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(243, 20);
+            this.txtMaNV.ReadOnly = true;
+            this.txtMaNV.Size = new System.Drawing.Size(283, 20);
             this.txtMaNV.TabIndex = 14;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label1.Location = new System.Drawing.Point(31, 54);
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(9, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 17);
             this.label1.TabIndex = 15;
@@ -197,27 +215,31 @@
             // 
             // btmTroVe
             // 
-            this.btmTroVe.Location = new System.Drawing.Point(683, 403);
+            this.btmTroVe.Image = ((System.Drawing.Image)(resources.GetObject("btmTroVe.Image")));
+            this.btmTroVe.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btmTroVe.Location = new System.Drawing.Point(821, 321);
             this.btmTroVe.Name = "btmTroVe";
-            this.btmTroVe.Size = new System.Drawing.Size(111, 55);
+            this.btmTroVe.Size = new System.Drawing.Size(129, 87);
             this.btmTroVe.TabIndex = 16;
             this.btmTroVe.Text = "Trở Về";
+            this.btmTroVe.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btmTroVe.UseVisualStyleBackColor = true;
             this.btmTroVe.Click += new System.EventHandler(this.btmTroVe_Click_1);
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(132, 147);
+            this.txtSearch.Location = new System.Drawing.Point(127, 143);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(329, 38);
+            this.txtSearch.Size = new System.Drawing.Size(367, 38);
             this.txtSearch.TabIndex = 17;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(59, 163);
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(42, 159);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 20);
             this.label2.TabIndex = 18;
@@ -226,9 +248,9 @@
             // radioMa
             // 
             this.radioMa.AutoSize = true;
-            this.radioMa.Location = new System.Drawing.Point(494, 158);
+            this.radioMa.Location = new System.Drawing.Point(127, 193);
             this.radioMa.Name = "radioMa";
-            this.radioMa.Size = new System.Drawing.Size(88, 17);
+            this.radioMa.Size = new System.Drawing.Size(99, 17);
             this.radioMa.TabIndex = 19;
             this.radioMa.TabStop = true;
             this.radioMa.Text = "Tìm Theo Mã";
@@ -237,9 +259,9 @@
             // radioTen
             // 
             this.radioTen.AutoSize = true;
-            this.radioTen.Location = new System.Drawing.Point(602, 158);
+            this.radioTen.Location = new System.Drawing.Point(390, 193);
             this.radioTen.Name = "radioTen";
-            this.radioTen.Size = new System.Drawing.Size(92, 17);
+            this.radioTen.Size = new System.Drawing.Size(104, 17);
             this.radioTen.TabIndex = 20;
             this.radioTen.TabStop = true;
             this.radioTen.Text = "Tìm Theo Tên";
@@ -248,9 +270,9 @@
             // radioHo
             // 
             this.radioHo.AutoSize = true;
-            this.radioHo.Location = new System.Drawing.Point(494, 181);
+            this.radioHo.Location = new System.Drawing.Point(262, 193);
             this.radioHo.Name = "radioHo";
-            this.radioHo.Size = new System.Drawing.Size(87, 17);
+            this.radioHo.Size = new System.Drawing.Size(98, 17);
             this.radioHo.TabIndex = 21;
             this.radioHo.TabStop = true;
             this.radioHo.Text = "Tìm Theo Họ";
@@ -258,11 +280,14 @@
             // 
             // bmtSearch
             // 
-            this.bmtSearch.Location = new System.Drawing.Point(253, 191);
+            this.bmtSearch.Image = ((System.Drawing.Image)(resources.GetObject("bmtSearch.Image")));
+            this.bmtSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bmtSearch.Location = new System.Drawing.Point(555, 145);
             this.bmtSearch.Name = "bmtSearch";
-            this.bmtSearch.Size = new System.Drawing.Size(75, 23);
+            this.bmtSearch.Size = new System.Drawing.Size(125, 62);
             this.bmtSearch.TabIndex = 23;
             this.bmtSearch.Text = "Tìm Kiếm";
+            this.bmtSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bmtSearch.UseVisualStyleBackColor = true;
             this.bmtSearch.Click += new System.EventHandler(this.bmtSearch_Click);
             // 
@@ -272,29 +297,45 @@
             // 
             // btmCapNhat
             // 
-            this.btmCapNhat.Location = new System.Drawing.Point(734, 147);
+            this.btmCapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btmCapNhat.Image")));
+            this.btmCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btmCapNhat.Location = new System.Drawing.Point(751, 142);
             this.btmCapNhat.Name = "btmCapNhat";
-            this.btmCapNhat.Size = new System.Drawing.Size(111, 55);
+            this.btmCapNhat.Size = new System.Drawing.Size(129, 68);
             this.btmCapNhat.TabIndex = 24;
-            this.btmCapNhat.Text = "Cập Nhật";
+            this.btmCapNhat.Text = "Refresh";
+            this.btmCapNhat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btmCapNhat.UseVisualStyleBackColor = true;
             this.btmCapNhat.Click += new System.EventHandler(this.button2_Click);
             // 
             // btmThoat
             // 
-            this.btmThoat.Location = new System.Drawing.Point(758, 303);
+            this.btmThoat.Image = ((System.Drawing.Image)(resources.GetObject("btmThoat.Image")));
+            this.btmThoat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btmThoat.Location = new System.Drawing.Point(766, 451);
             this.btmThoat.Name = "btmThoat";
-            this.btmThoat.Size = new System.Drawing.Size(111, 55);
+            this.btmThoat.Size = new System.Drawing.Size(129, 87);
             this.btmThoat.TabIndex = 11;
             this.btmThoat.Text = "Thoát";
+            this.btmThoat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btmThoat.UseVisualStyleBackColor = true;
             this.btmThoat.Click += new System.EventHandler(this.btmThoat_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-3, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(117, 50);
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
             // QLNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(896, 540);
+            this.ClientSize = new System.Drawing.Size(969, 550);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btmCapNhat);
             this.Controls.Add(this.bmtSearch);
             this.Controls.Add(this.radioHo);
@@ -319,11 +360,13 @@
             this.Controls.Add(this.dc);
             this.Controls.Add(this.ho);
             this.Controls.Add(this.btbThem);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "QLNhanVien";
             this.Text = "Quản Lí Nhân Viên";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,6 +399,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button btmCapNhat;
         private System.Windows.Forms.Button btmThoat;
+        private System.Windows.Forms.PictureBox pictureBox1;
 
 
     }
