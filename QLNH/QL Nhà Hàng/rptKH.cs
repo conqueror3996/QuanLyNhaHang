@@ -34,7 +34,7 @@ namespace QL_Nhà_Hàng
                 DataTable dtKhachHang = new DataTable();
                 da.Fill(dtKhachHang);
                 ReportDataSource rptSource = new ReportDataSource("DataSet1", dtKhachHang);
-            reportViewer1.LocalReport.DataSources.Clear();
+                 reportViewer1.LocalReport.DataSources.Clear();
                 reportViewer1.LocalReport.DataSources.Add(rptSource);
                 reportViewer1.LocalReport.ReportPath = @"..\..\rptKhachHang.rdlc";
                 this.reportViewer1.RefreshReport();
