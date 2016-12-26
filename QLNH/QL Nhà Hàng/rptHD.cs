@@ -9,8 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.Configuration;
+//using System.Data.SqlClient;
+//using System.Configuration;
 using Microsoft.Reporting.WinForms;
 namespace QL_Nhà_Hàng
 {
