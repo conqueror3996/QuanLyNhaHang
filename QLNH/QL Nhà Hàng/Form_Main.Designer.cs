@@ -142,7 +142,7 @@
             // 
             this.trởVềToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
             this.trởVềToolStripMenuItem.Name = "trởVềToolStripMenuItem";
-            this.trởVềToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.trởVềToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.trởVềToolStripMenuItem.Text = "Trở Về";
             this.trởVềToolStripMenuItem.Click += new System.EventHandler(this.trởVềToolStripMenuItem_Click);
             // 
