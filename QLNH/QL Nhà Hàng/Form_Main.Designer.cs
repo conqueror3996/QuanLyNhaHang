@@ -42,6 +42,7 @@
             this.trởVềToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.quảnLýBànToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +71,7 @@
             this.quảnLíNhânViênToolStripMenuItem,
             this.quảnLíKháchHàngToolStripMenuItem,
             this.quảnLýThựcĐơnToolStripMenuItem,
+            this.quảnLýBànToolStripMenuItem,
             this.quảnLíHóaĐơnToolStripMenuItem,
             this.inBáoCáoToolStripMenuItem,
             this.trởVềToolStripMenuItem,
@@ -117,7 +119,7 @@
             this.inBáoCáoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reportKháchHàngToolStripMenuItem,
             this.reportHóaĐơnToolStripMenuItem});
-            this.inBáoCáoToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.inBáoCáoToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
             this.inBáoCáoToolStripMenuItem.Name = "inBáoCáoToolStripMenuItem";
             this.inBáoCáoToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.inBáoCáoToolStripMenuItem.Text = "In Báo Cáo";
@@ -163,6 +165,14 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // quảnLýBànToolStripMenuItem
+            // 
+            this.quảnLýBànToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
+            this.quảnLýBànToolStripMenuItem.Name = "quảnLýBànToolStripMenuItem";
+            this.quảnLýBànToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
+            this.quảnLýBànToolStripMenuItem.Text = "Quản lý Bàn";
+            this.quảnLýBànToolStripMenuItem.Click += new System.EventHandler(this.quảnLýBànToolStripMenuItem_Click);
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,5 +208,6 @@
         private System.Windows.Forms.ToolStripMenuItem quảnLýThựcĐơnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportKháchHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportHóaĐơnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quảnLýBànToolStripMenuItem;
     }
 }
