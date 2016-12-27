@@ -101,3 +101,4 @@ C:\Users\Admin\Desktop\Backup\QLNH\QL Nhà Hàng\obj\Debug\QL Nhà Hàng.csproj.
 C:\Users\Admin\Desktop\Backup\QLNH\QL Nhà Hàng\obj\Debug\RdlCompile.cache
 C:\Users\Admin\Desktop\Backup\QLNH\QL Nhà Hàng\obj\Debug\RdlCompile.compiled
 C:\Users\Admin\Desktop\Backup\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.QLBan.resources
+C:\Users\Asus\Desktop\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.QLBan.resources
