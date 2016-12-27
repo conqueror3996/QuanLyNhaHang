@@ -202,12 +202,7 @@ namespace QL_Nhà_Hàng
             radMa.Checked = false;
             radLoai.Checked = false;
             radTen.Checked = false;
-            txtNhap.Text = " ";
-            txtMaSP.Text = " ";
-            txtTenSP.Text = " ";
-            txtDonvitinh.Text = " ";
-            txtDongia.Text = " ";
-            txtLoaiSP.Text = " ";
+            
         }
 
        

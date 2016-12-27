@@ -23,17 +23,13 @@ namespace QL_Nhà_Hàng
             InitializeComponent();
         }
 
-
-
-
         public DataSet GetDataset(string sql)
         {
             try
             {
                 cn.Open();
-                //sql = "SELECT * FROM HoaDon";
+                
                 SqlDataAdapter da = new SqlDataAdapter(sql, cn);
-                /*DataSet*/
                 ds = new DataSet();
                 da.Fill(ds);
                 return ds;

@@ -77,6 +77,12 @@ namespace QL_Nhà_Hàng
             rptHD.Show();
         }
 
+        private void quảnLýBànToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QLBan fromQLBan = new QLBan();
+            fromQLBan.ShowDialog();
+        }
+
       
        
     }

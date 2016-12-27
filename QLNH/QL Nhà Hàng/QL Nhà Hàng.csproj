@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ban.cs" />
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -70,6 +71,12 @@
     </Compile>
     <Compile Include="HoaDon.cs" />
     <Compile Include="KhachHang.cs" />
+    <Compile Include="QLBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLBan.Designer.cs">
+      <DependentUpon>QLBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +136,9 @@
     <Compile Include="ThucDon.cs" />
     <EmbeddedResource Include="Form_Thêm.resx">
       <DependentUpon>Form_Thêm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLBan.resx">
+      <DependentUpon>QLBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLHoaDon.resx">
       <DependentUpon>QLHoaDon.cs</DependentUpon>
