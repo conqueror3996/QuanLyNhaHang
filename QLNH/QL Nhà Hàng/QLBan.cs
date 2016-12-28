@@ -237,6 +237,11 @@ namespace QL_Nhà_Hàng
             radTen.Checked = false;
             radKV.Checked = false;
             radTThai.Checked = false;
+            txtMaBan.Text = " ";
+            txtChiTiet.Text = " ";
+            txtTenBan.Text = " ";
+            txtTThai.Text = " ";
+            
             
         }
     }

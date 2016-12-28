@@ -164,7 +164,7 @@
             // 
             this.btnTrove.Image = ((System.Drawing.Image)(resources.GetObject("btnTrove.Image")));
             this.btnTrove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrove.Location = new System.Drawing.Point(216, 380);
+            this.btnTrove.Location = new System.Drawing.Point(51, 386);
             this.btnTrove.Name = "btnTrove";
             this.btnTrove.Size = new System.Drawing.Size(105, 68);
             this.btnTrove.TabIndex = 10;
@@ -235,7 +235,7 @@
             // 
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
             this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefresh.Location = new System.Drawing.Point(46, 383);
+            this.btnRefresh.Location = new System.Drawing.Point(212, 388);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(120, 65);
             this.btnRefresh.TabIndex = 13;
@@ -270,9 +270,8 @@
             // txtNhap
             // 
             this.txtNhap.Location = new System.Drawing.Point(541, 297);
-            this.txtNhap.Multiline = true;
             this.txtNhap.Name = "txtNhap";
-            this.txtNhap.Size = new System.Drawing.Size(225, 30);
+            this.txtNhap.Size = new System.Drawing.Size(225, 20);
             this.txtNhap.TabIndex = 16;
             // 
             // radTen

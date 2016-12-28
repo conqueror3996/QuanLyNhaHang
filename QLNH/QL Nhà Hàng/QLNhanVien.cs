@@ -201,7 +201,11 @@ namespace QL_Nhà_Hàng
             radioHo.Checked = false;
             radioMa.Checked = false;
             radioTen.Checked = false;
-            txtSearch.Text = " ";
+            txtMaNV.Text = " ";
+            txtHo.Text = " ";
+            txtTen.Text = " ";
+            txtDiaChi.Text = " ";
+            txtSDT.Text = " ";
 
         }
 

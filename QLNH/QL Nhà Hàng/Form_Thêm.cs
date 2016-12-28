@@ -78,10 +78,7 @@ namespace QL_Nhà_Hàng
 
         private void btmQuayLai_Click_1(object sender, EventArgs e)
         {
-            //this.Hide();
-            //QLNhanVien form3 = new QLNhanVien();
-            //form3.ShowDialog();
-            //this.Close();
+            
             this.Close();
         
         }

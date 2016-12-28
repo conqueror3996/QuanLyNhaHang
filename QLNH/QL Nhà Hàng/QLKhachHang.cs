@@ -211,7 +211,11 @@ namespace QL_Nhà_Hàng
             dataGridView1.DataSource = ds.Tables[0];
             radMa.Checked = false;
             radTen.Checked = false;
-            txtNhap.Text = " ";
+            txtMaKH.Text = " ";
+            txtTen.Text = " ";
+            txtDienThoai.Text = " ";
+            txtDiaChi.Text = " ";
+            txtFax.Text = " ";
         }
 
       
