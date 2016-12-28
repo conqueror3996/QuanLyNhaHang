@@ -35,6 +35,7 @@
             this.quảnLíNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLíKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýThựcĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýBànToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLíHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inBáoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,7 +43,6 @@
             this.trởVềToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.quảnLýBànToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,9 +54,9 @@
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(336, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(289, 31);
+            this.label1.Size = new System.Drawing.Size(244, 31);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Quản Lí Nhà Hàng 24h";
+            this.label1.Text = "Quản Lí Nhà Hàng ";
             // 
             // dateTimePicker1
             // 
@@ -105,6 +105,14 @@
             this.quảnLýThựcĐơnToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
             this.quảnLýThựcĐơnToolStripMenuItem.Text = "Quản lý Thực Đơn";
             this.quảnLýThựcĐơnToolStripMenuItem.Click += new System.EventHandler(this.quảnLýThựcĐơnToolStripMenuItem_Click);
+            // 
+            // quảnLýBànToolStripMenuItem
+            // 
+            this.quảnLýBànToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
+            this.quảnLýBànToolStripMenuItem.Name = "quảnLýBànToolStripMenuItem";
+            this.quảnLýBànToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
+            this.quảnLýBànToolStripMenuItem.Text = "Quản lý Bàn";
+            this.quảnLýBànToolStripMenuItem.Click += new System.EventHandler(this.quảnLýBànToolStripMenuItem_Click);
             // 
             // quảnLíHóaĐơnToolStripMenuItem
             // 
@@ -165,14 +173,6 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
-            // quảnLýBànToolStripMenuItem
-            // 
-            this.quảnLýBànToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
-            this.quảnLýBànToolStripMenuItem.Name = "quảnLýBànToolStripMenuItem";
-            this.quảnLýBànToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
-            this.quảnLýBànToolStripMenuItem.Text = "Quản lý Bàn";
-            this.quảnLýBànToolStripMenuItem.Click += new System.EventHandler(this.quảnLýBànToolStripMenuItem_Click);
-            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,7 +183,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form_Main";
-            this.Text = "Form_Main";
+            this.Text = "Adminstrator";
             this.Load += new System.EventHandler(this.Form_Main_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

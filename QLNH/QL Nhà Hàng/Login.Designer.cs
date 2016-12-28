@@ -110,11 +110,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(51, 9);
+            this.label3.Location = new System.Drawing.Point(34, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(289, 31);
+            this.label3.Size = new System.Drawing.Size(338, 31);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Quản Lí Nhà Hàng 24h";
+            this.label3.Text = "Quản Lí Nhà Hàng (Admin)";
             // 
             // checkBox1
             // 
