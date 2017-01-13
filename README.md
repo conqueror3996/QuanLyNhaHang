@@ -1,4 +1,4 @@
-Login: Tên đăng nhập: admin, mật khẩu: 123456
+ Login: Tên đăng nhập: admin, mật khẩu: 123456
 
 Thêm - Xóa - Sửa- Tìm kiếm  NHÂN VIÊN
 
