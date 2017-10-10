@@ -102,6 +102,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(387, 23);
             this.dateTimePicker1.Name = "dateTimePicker1";

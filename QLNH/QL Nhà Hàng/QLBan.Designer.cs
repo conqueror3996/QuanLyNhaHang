@@ -42,7 +42,6 @@
             this.btnTrove = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTThai = new System.Windows.Forms.TextBox();
-            this.comboKV = new System.Windows.Forms.ComboBox();
             this.txtChiTiet = new System.Windows.Forms.TextBox();
             this.txtTenBan = new System.Windows.Forms.TextBox();
             this.txtMaBan = new System.Windows.Forms.TextBox();
@@ -53,6 +52,7 @@
             this.radTen = new System.Windows.Forms.RadioButton();
             this.radTThai = new System.Windows.Forms.RadioButton();
             this.radKV = new System.Windows.Forms.RadioButton();
+            this.comboKV = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -202,14 +202,6 @@
             this.txtTThai.Size = new System.Drawing.Size(146, 20);
             this.txtTThai.TabIndex = 15;
             // 
-            // comboKV
-            // 
-            this.comboKV.FormattingEnabled = true;
-            this.comboKV.Location = new System.Drawing.Point(130, 75);
-            this.comboKV.Name = "comboKV";
-            this.comboKV.Size = new System.Drawing.Size(146, 21);
-            this.comboKV.TabIndex = 14;
-            // 
             // txtChiTiet
             // 
             this.txtChiTiet.Location = new System.Drawing.Point(130, 158);
@@ -307,6 +299,14 @@
             this.radKV.Text = "Tìm theo Khu vực";
             this.radKV.UseVisualStyleBackColor = true;
             // 
+            // comboKV
+            // 
+            this.comboKV.FormattingEnabled = true;
+            this.comboKV.Location = new System.Drawing.Point(130, 75);
+            this.comboKV.Name = "comboKV";
+            this.comboKV.Size = new System.Drawing.Size(146, 21);
+            this.comboKV.TabIndex = 14;           
+            // 
             // QLBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,7 +348,6 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnTrove;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboKV;
         private System.Windows.Forms.TextBox txtChiTiet;
         private System.Windows.Forms.TextBox txtTenBan;
         private System.Windows.Forms.TextBox txtMaBan;
@@ -360,5 +359,6 @@
         private System.Windows.Forms.RadioButton radTThai;
         private System.Windows.Forms.RadioButton radKV;
         private System.Windows.Forms.TextBox txtTThai;
+        private System.Windows.Forms.ComboBox comboKV;
     }
 }
