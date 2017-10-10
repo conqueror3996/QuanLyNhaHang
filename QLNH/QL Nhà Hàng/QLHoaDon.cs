@@ -195,7 +195,7 @@ namespace QL_Nhà_Hàng
           try
           {
               cn.Open();
-              string sua = "update HoaDon set NgayLapHD='" + dateTimePicker1.Value.Date + "',NgayGiaoHang='" + dateTimePicker2.Value.Date + "', MaKH='" + comboMaKH.SelectedValue.ToString() + "' ,MaNV='" + comboMaNV.SelectedValue.ToString() + "' WHERE MaHD='" + txtMaHD.Text + "'";
+              string sua = "update HoaDon set NgayLapHD='" + dateTimePicker1.Value.ToString("MM/dd/yyyy") + "',NgayGiaoHang='" + dateTimePicker2.Value.ToString("MM/dd/yyyy") + "', MaKH='" + comboMaKH.SelectedValue.ToString() + "' ,MaNV='" + comboMaNV.SelectedValue.ToString() + "' WHERE MaHD='" + txtMaHD.Text + "'";
               SqlCommand cmdSua = new SqlCommand(sua, cn);
               cmdSua.ExecuteNonQuery();
               hienthiHD();

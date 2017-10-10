@@ -28,7 +28,7 @@ namespace QL_Nhà_Hàng
             try
             {
                 cn.Open();
-                
+
                 SqlDataAdapter da = new SqlDataAdapter(sql, cn);
                 /*DataSet*/
                 ds = new DataSet();
@@ -48,15 +48,15 @@ namespace QL_Nhà_Hàng
             }
             return null;
         }
-       
+
         private void QLBan_Load(object sender, EventArgs e)
         {
             cnStr = ConfigurationManager.ConnectionStrings["cnStr"].ConnectionString;
             cn = new SqlConnection(cnStr);
-            LoadKV();
+            LoadKhuVuc();
             hienThiBan();
             txtMaBan.DataBindings.Add("Text", Orders, "MaBan");
-            comboKV.DataBindings.Add("Text", Orders, "TenKhuVuc");
+            comboKV.DataBindings.Add("Text", Orders, "MaKhuVuc");
             txtTThai.DataBindings.Add("Text", Orders, "TrangThaiBan");
         }
         private void hienThiBan()
@@ -68,38 +68,38 @@ namespace QL_Nhà_Hàng
             dataGridView1.DataSource = ds.Tables[0];
             Orders = ds.Tables[0];
         }
-        public void LoadKV()
+        public void LoadKhuVuc()
         {
             cnStr = ConfigurationManager.ConnectionStrings["cnStr"].ConnectionString;
             cn = new SqlConnection(cnStr);
             cn.Open();
-            string strCmd = "select TenKV from KhuVuc";
+            string strCmd = "select MaKhuVuc from KhuVuc";
             SqlCommand cmd = new SqlCommand(strCmd, cn);
             SqlDataAdapter da = new SqlDataAdapter(strCmd, cn);
             DataTable dt = new DataTable();
             da.Fill(dt);
 
             comboKV.DataSource = dt;
-            comboKV.DisplayMember = "TenKV";
-            comboKV.ValueMember = "TenKV";
+            comboKV.DisplayMember = "TenKhuVuc";
+            comboKV.ValueMember = "MaKhuVuc";
             comboKV.Enabled = true;
             cmd.ExecuteNonQuery();
             cn.Close();
 
         }
-        
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             try
             {
-                if (comboKV.Text == "" ||  txtMaBan.Text == "")
+                if (comboKV.Text == "" || txtMaBan.Text == "")
                 {
                     MessageBox.Show("Ban Chưa Nhập Thong Tin Hóa Đơn", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
 
-                    string insert = "insert into Ban(MaBan,TenkhuVuc, ChiTiet, TrangThaiBan, TenBan) values ('" + txtMaBan.Text + "','" + comboKV.SelectedValue.ToString() +  "','" + txtChiTiet.Text + "','" + txtTThai.Text + "','" + txtTenBan.Text + "')" ;
+                    string insert = "insert into Ban(MaBan,MaKhuVuc, ChiTiet, TrangThaiBan, TenBan) values ('" + txtMaBan.Text + "','" + comboKV.SelectedValue.ToString() + "','" + txtChiTiet.Text + "','" + txtTThai.Text + "','" + txtTenBan.Text + "')";
 
                     SqlCommand cmdthem = new SqlCommand(insert, cn);
                     cn.Open();
@@ -147,7 +147,7 @@ namespace QL_Nhà_Hàng
             try
             {
                 cn.Open();
-                string update = "update  Ban set MaBan= '" + txtMaBan.Text + "', TenKhuVuc='" + comboKV.SelectedValue.ToString() + "', ChiTiet='" + txtChiTiet.Text + "', TrangThaiBan='" + txtTThai.Text + "', TenBan='" + txtTenBan.Text + "'WHERE MaBan='" + txtMaBan.Text + "'";
+                string update = "update  Ban set MaBan= '" + txtMaBan.Text + "',MaKhuVuc='" + comboKV.SelectedValue.ToString() + "',ChiTiet='" + txtChiTiet.Text + "', TrangThaiBan='" + txtTThai.Text + "',TenBan='" + txtTenBan.Text + "'WHERE MaBan='" + txtMaBan.Text + "'";
                 SqlCommand cmdSua = new SqlCommand(update, cn);
                 cmdSua.ExecuteNonQuery();
                 hienThiBan();
@@ -187,7 +187,7 @@ namespace QL_Nhà_Hàng
                 }
                 else if (radKV.Checked == true)
                 {
-                    tim = "select * from Ban WHERE TenKhuVuc LIKE  '%" + txtNhap.Text + "%'";
+                    tim = "select * from Ban WHERE MaKhuVuc LIKE  '%" + txtNhap.Text + "%'";
                     SqlCommand cmdTim = new SqlCommand(tim, cn);
                     cmdTim.ExecuteNonQuery();
                     hienThiGirdView(tim);
@@ -201,10 +201,10 @@ namespace QL_Nhà_Hàng
                 }
 
             }
-              
+
             catch (SqlException ex)
             {
-                MessageBox.Show("Loi Tim\n"+ex.Message);
+                MessageBox.Show("Loi Tim\n" + ex.Message);
                 throw;
             }
             finally
@@ -215,7 +215,7 @@ namespace QL_Nhà_Hàng
 
         private void btnTrove_Click(object sender, EventArgs e)
         {
-            this.Close(); 
+            this.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -226,13 +226,13 @@ namespace QL_Nhà_Hàng
             txtChiTiet.Text = dataGridView1.Rows[index].Cells[2].Value.ToString();
             txtTThai.Text = dataGridView1.Rows[index].Cells[3].Value.ToString();
             txtTenBan.Text = dataGridView1.Rows[index].Cells[4].Value.ToString();
-            
-            
+
+
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            string sql ="select * from Ban";
+            string sql = "select * from Ban";
             hienThiGirdView(sql);
             radTen.Checked = false;
             radKV.Checked = false;
@@ -241,8 +241,8 @@ namespace QL_Nhà_Hàng
             txtChiTiet.Text = " ";
             txtTenBan.Text = " ";
             txtTThai.Text = " ";
-            
-            
+
+
         }
     }
 }

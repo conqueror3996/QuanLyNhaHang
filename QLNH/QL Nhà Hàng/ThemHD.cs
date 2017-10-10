@@ -96,8 +96,8 @@ namespace QL_Nhà_Hàng
                 }
                 else
                 {
-                  
-                    string insert = "insert into HoaDon(MaHD,MaKH,MaNV,NgayLapHD,NgayGiaoHang) values ('" + txtMaHD.Text + "','" + comboMaKH.SelectedValue.ToString() + "','" + comboMaNV.SelectedValue.ToString() + "','" + dateTimePicker1.Value.Date + "','" + dateTimePicker2.Value.Date + "')";
+
+                    string insert = "insert into HoaDon(MaHD,MaKH,MaNV,NgayLapHD,NgayGiaoHang) values ('" + txtMaHD.Text + "','" + comboMaKH.SelectedValue.ToString() + "','" + comboMaNV.SelectedValue.ToString() + "','" + dateTimePicker1.Value.ToString("MM/dd/yyyy") + "','" + dateTimePicker2.Value.ToString("MM/dd/yyyy") + "')";
                     SqlCommand cmdthem = new SqlCommand(insert, cn);
                     cn.Open();
                     cmdthem.ExecuteNonQuery();
