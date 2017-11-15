@@ -1,0 +1,7 @@
+D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\UnitTest\bin\Debug\UnitTest.dll
+D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\UnitTest\bin\Debug\UnitTest.pdb
+D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\UnitTest\bin\Debug\QL Nhà Hàng.exe
+D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\UnitTest\bin\Debug\QL Nhà Hàng.pdb
+D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\UnitTest\obj\Debug\UnitTest.dll
+D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\UnitTest\obj\Debug\UnitTest.pdb

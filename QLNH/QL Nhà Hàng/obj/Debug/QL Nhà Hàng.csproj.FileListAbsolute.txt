@@ -108,7 +108,6 @@ D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL Nhà Hàng.ex
 D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL Nhà Hàng.pdb
 D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\QL Nhà Hàng\bin\Debug\QL Nhà Hàng.exe
 D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\QL Nhà Hàng\bin\Debug\QL Nhà Hàng.pdb
-D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL Nhà Hàng.csprojResolveAssemblyReference.cache
 D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.Form_Thêm.resources
 D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.QLBan.resources
 D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.QLHoaDon.resources
@@ -124,3 +123,4 @@ D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.Th
 D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL Nhà Hàng.csproj.GenerateResource.Cache
 D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\RdlCompile.cache
 D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\RdlCompile.compiled
+D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL Nhà Hàng.csprojResolveAssemblyReference.cache

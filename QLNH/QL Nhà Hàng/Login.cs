@@ -74,6 +74,15 @@ namespace QL_Nhà_Hàng
                 txtPassword.UseSystemPasswordChar = true;
             }
         }
+        public bool ktdangnhap(string user, string pass)
+        {
+            if (user == "admin" && pass == "123456")
+            {
+                return true;
+            }
+            else
+                return false;
+        }
 
        
     }

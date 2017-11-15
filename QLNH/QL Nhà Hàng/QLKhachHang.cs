@@ -15,6 +15,7 @@ namespace QL_Nhà_Hàng
     {
         String cnStr;
         SqlConnection cn;
+        class_khachhang kh = new class_khachhang();
         public QLKhachHang()
         {
             InitializeComponent();
@@ -97,12 +98,12 @@ namespace QL_Nhà_Hàng
        
         private void btnTim_Click_1(object sender, EventArgs e)
         {
-
-            string sql = "SELECT * FROM KhachHang WHERE";
+            string sql = "SELECT * FROM KhachHang WHERE MaKH LIKE '%" + txtNhap.Text + "%' OR TenKH LIKE  '%" + txtNhap.Text + "%' OR DiaChi LIKE  '%" + txtNhap.Text + "%'OR DienThoai LIKE  '%" + txtNhap.Text + "%'OR Fax LIKE  '%" + txtNhap.Text + "%'";
+            string sql1 = "SELECT * FROM KhachHang WHERE";
             if (radMa.Checked == true)
-                sql += " MaKH LIKE '%" + txtNhap.Text + "%'";
-            else 
-                sql += " TenKH LIKE  '%" + txtNhap.Text + "%'";
+                 sql1 += " MaKH LIKE '%" + txtNhap.Text + "%'";
+            else
+                sql1 += " TenKH LIKE  '%" + txtNhap.Text + "%'";
            
             dataGridView1.DataSource = GetKhachHang(sql);
         }
@@ -130,79 +131,129 @@ namespace QL_Nhà_Hàng
         
         private void btnThem_Click(object sender, EventArgs e)
         {
-            
-             try
+
+
+            if (kh.kiemtra(txtMaKH.Text.Trim(), txtTen.Text.Trim(), txtDiaChi.Text.Trim(), txtDienThoai.Text.Trim(), txtFax.Text.Trim()) == false)
             {
-                cn.Open();
-                string Insert = "Insert into KhachHang(MaKH, TenKH, DiaChi, DienThoai, Fax) values('" + txtMaKH.Text + "','" + txtTen.Text +"','" +txtDiaChi.Text + "','" + txtDienThoai.Text + "','" + txtFax.Text+ "')";
-                SqlCommand cmdadd = new SqlCommand(Insert, cn);
-                
-                cmdadd.ExecuteNonQuery();
-                Connect();
+                kh.them(txtMaKH.Text, txtTen.Text, txtDiaChi.Text, txtDienThoai.Text, txtFax.Text);
                 MessageBox.Show("Them Thanh Cong ", "Thông Báo");
+                update();
             }
-            catch (SqlException ex)
+            else
             {
-                MessageBox.Show("Loi Them", "Thong Bao" + ex.Message);
-               
+                MessageBox.Show("Loi Them", "Thong Bao");
             }
-            finally
-            {
-                cn.Close();
-            }
+
+            //try
+            //{
+            //    cn.Open();
+            //    string Insert = "Insert into KhachHang(MaKH, TenKH, DiaChi, DienThoai, Fax) values('" + txtMaKH.Text + "','" + txtTen.Text + "','" + txtDiaChi.Text + "','" + txtDienThoai.Text + "','" + txtFax.Text + "')";
+            //    SqlCommand cmdadd = new SqlCommand(Insert, cn);
+
+            //    cmdadd.ExecuteNonQuery();
+            //    Connect();
+            //    MessageBox.Show("Them Thanh Cong ", "Thông Báo");
+            //}
+            //catch (SqlException ex)
+            //{
+            //    MessageBox.Show("Loi Them", "Thong Bao" + ex.Message);
+
+            //}
+            //finally
+            //{
+            //    cn.Close();
+            //}
         
         }
         
         private void btnXoa_Click(object sender, EventArgs e)
         {
+
+            if (kh.kiemtra(txtMaKH.Text, txtTen.Text, txtDiaChi.Text, txtDienThoai.Text, txtFax.Text) == false)
+            {
+                kh.xoa(txtTen.Text);
+                MessageBox.Show("Xoa Thanh Cong ", "Thông Báo");
+                update();
+            }
+            else
+            {
+                MessageBox.Show("Loi Xoa", "Thong Bao");
+            }             
             
-            try
-            {
-                cn.Open();
-                string Delete = "Delete KhachHang WHERE TenKH ='" + txtTen.Text + "'";
-                SqlCommand cmddel = new SqlCommand(Delete, cn);
+            //try
+            //{
+            //    cn.Open();
+            //    string Delete = "Delete KhachHang WHERE TenKH ='" + txtTen.Text + "'";
+            //    SqlCommand cmddel = new SqlCommand(Delete, cn);
                 
-                cmddel.ExecuteNonQuery();
-                Connect();
-                MessageBox.Show("Xóa Thành Công ", "Thông Báo");
+            //    cmddel.ExecuteNonQuery();
+            //    Connect();
+            //    MessageBox.Show("Xóa Thành Công ", "Thông Báo");
 
                 
 
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Loi Xoa", "Thông Báo\n" + ex.Message);
-            }
-            finally
-            {
-                cn.Close();
-            }
+            //}
+            //catch (SqlException ex)
+            //{
+            //    MessageBox.Show("Loi Xoa", "Thông Báo\n" + ex.Message);
+            //}
+            //finally
+            //{
+            //    cn.Close();
+            //}
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            try
+            if (kh.kiemtra(txtMaKH.Text, txtTen.Text, txtDiaChi.Text, txtDienThoai.Text, txtFax.Text) == false)
             {
-                cn.Open();
-                string Update = "update KhachHang set TenKH ='" + txtTen.Text + "',DiaChi='" + txtDiaChi.Text + "',DienThoai='" + txtDienThoai.Text + "',Fax='" + txtFax.Text + "' where MaKH='" + txtMaKH.Text + "'";
-                SqlCommand cmdUpdate = new SqlCommand(Update, cn);
-                
-                cmdUpdate.ExecuteNonQuery();
-                Connect();
+                kh.sua(txtMaKH.Text, txtTen.Text, txtDiaChi.Text, txtDienThoai.Text, txtFax.Text);
                 MessageBox.Show("Sua Thanh Cong ", "Thông Báo");
+                update();
             }
-            catch (SqlException ex)
+            else
             {
-                MessageBox.Show("Loi Sua", "thong Bao\n" + ex.Message);
+                MessageBox.Show("Loi Sua", "Thong Bao");
+            }   
+           
+            //try
+            //{
+            //    cn.Open();
+            //    string Update = "update KhachHang set TenKH ='" + txtTen.Text + "',DiaChi='" + txtDiaChi.Text + "',DienThoai='" + txtDienThoai.Text + "',Fax='" + txtFax.Text + "' where MaKH='" + txtMaKH.Text + "'";
+            //    SqlCommand cmdUpdate = new SqlCommand(Update, cn);
+                
+            //    cmdUpdate.ExecuteNonQuery();
+            //    Connect();
+            //    MessageBox.Show("Sua Thanh Cong ", "Thông Báo");
+            //}
+            //catch (SqlException ex)
+            //{
+            //    MessageBox.Show("Loi Sua", "thong Bao\n" + ex.Message);
 
-            }
-            finally
-            {
-                cn.Close();
-            }
+            //}
+            //finally
+            //{
+            //    cn.Close();
+            //}
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            update();
+            //string sql = "select * from KhachHang";
+            //SqlDataAdapter da = new SqlDataAdapter(sql, cn);
+            //DataSet ds = new DataSet();
+            //da.Fill(ds);
+            //dataGridView1.DataSource = ds.Tables[0];
+            //radMa.Checked = false;
+            //radTen.Checked = false;
+            //txtMaKH.Text = " ";
+            //txtTen.Text = " ";
+            //txtDienThoai.Text = " ";
+            //txtDiaChi.Text = " ";
+            //txtFax.Text = " ";
+        }
+        public void update()
         {
             string sql = "select * from KhachHang";
             SqlDataAdapter da = new SqlDataAdapter(sql, cn);
@@ -217,11 +268,5 @@ namespace QL_Nhà_Hàng
             txtDiaChi.Text = " ";
             txtFax.Text = " ";
         }
-
-      
-       
-        
-
-        
     }
 }

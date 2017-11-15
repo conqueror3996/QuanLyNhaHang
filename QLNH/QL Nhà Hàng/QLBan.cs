@@ -99,7 +99,7 @@ namespace QL_Nhà_Hàng
                 else
                 {
 
-                    string insert = "insert into Ban(MaBan,MaKhuVuc, ChiTiet, TrangThaiBan, TenBan) values ('" + txtMaBan.Text + "','" + comboKV.SelectedValue.ToString() + "','" + txtChiTiet.Text + "','" + txtTThai.Text + "','" + txtTenBan.Text + "')";
+                    string insert = "if not exists MaBan = '" + txtMaBan.Text + "' begin insert into Ban(MaBan,MaKhuVuc, ChiTiet, TrangThaiBan, TenBan) values ('" + txtMaBan.Text + "','" + comboKV.SelectedValue.ToString() + "','" + txtChiTiet.Text + "','" + txtTThai.Text + "','" + txtTenBan.Text + "') end";
 
                     SqlCommand cmdthem = new SqlCommand(insert, cn);
                     cn.Open();
@@ -111,7 +111,7 @@ namespace QL_Nhà_Hàng
             catch (SqlException ex)
             {
 
-                MessageBox.Show("lỗi Thêm Dữ liệu\n" + ex.Message);
+                MessageBox.Show("lỗi Thêm Dữ liệu\n" );
             }
             finally
             {
@@ -204,7 +204,7 @@ namespace QL_Nhà_Hàng
 
             catch (SqlException ex)
             {
-                MessageBox.Show("Loi Tim\n" + ex.Message);
+                MessageBox.Show("Loi Tim\n" );
                 throw;
             }
             finally
