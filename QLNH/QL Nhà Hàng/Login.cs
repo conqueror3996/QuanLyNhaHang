@@ -19,34 +19,48 @@ namespace QL_Nhà_Hàng
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text.Length ==0 && txtPassword.Text.Length == 0)
+            Dangnhap();
+        }
+
+        public bool KTTenDangNhap(string a)
+        {
+            if (a.Length == 0)
+            {
+                return false;
+            }
+            return true;
+        }
+         public void Dangnhap()
+        {
+            //txtUsername.Text = "";
+            //txtPassword.Text = "";
+            if (txtUsername.Text.Length == 0 && txtPassword.Text.Length == 0)
             {
                 MessageBox.Show("Bạn Chưa Nhập Mật Khẩu", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-            else if (this.txtUsername.Text.Length ==0)
+            else if (this.txtUsername.Text.Length == 0)
             {
-                 MessageBox.Show("Bạn Chưa Nhập Username", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Bạn Chưa Nhập Username", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (this.txtPassword.Text.Length == 0)
             {
                 MessageBox.Show("Bạn Chưa Nhập Mật Khẩu", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
+
             }
-           
-            else if (txtUsername.Text =="admin" && txtPassword.Text=="123456")
+
+            else if (txtUsername.Text == "admin" && txtPassword.Text == "123456")
             {
                 MessageBox.Show("Đăng Nhập Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 Form_Main form2 = new Form_Main();
                 form2.ShowDialog();
                 this.Close();
-                
+
             }
             else
-                MessageBox.Show("Tên Đăng Nhập không Đúng,Vui Lòng Kiểm Tra lại", "Thông Báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Tên Đăng Nhập hoặc Mật khẩu không Đúng,Vui Lòng Kiểm Tra lại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
         private void Login_Load(object sender, EventArgs e)
         {
             txtUsername.Focus();
