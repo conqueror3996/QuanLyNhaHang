@@ -1,7 +1,0 @@
-C:\Users\Admin\Desktop\LTCSDL\QuanLyNhaHang\QLNH\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
-C:\Users\Admin\Desktop\LTCSDL\QuanLyNhaHang\QLNH\UnitTestProject1\bin\Debug\UnitTestProject1.dll
-C:\Users\Admin\Desktop\LTCSDL\QuanLyNhaHang\QLNH\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
-C:\Users\Admin\Desktop\LTCSDL\QuanLyNhaHang\QLNH\UnitTestProject1\bin\Debug\QL Nhà Hàng.exe
-C:\Users\Admin\Desktop\LTCSDL\QuanLyNhaHang\QLNH\UnitTestProject1\bin\Debug\QL Nhà Hàng.pdb
-C:\Users\Admin\Desktop\LTCSDL\QuanLyNhaHang\QLNH\UnitTestProject1\obj\Debug\UnitTestProject1.dll
-C:\Users\Admin\Desktop\LTCSDL\QuanLyNhaHang\QLNH\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
