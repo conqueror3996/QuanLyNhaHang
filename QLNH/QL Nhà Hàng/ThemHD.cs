@@ -90,27 +90,20 @@ namespace QL_Nhà_Hàng
         {
             try
             {
-                
-                    if (comboMaKH.Text == "" || comboMaNV.Text == "" || txtMaHD.Text == "")
-                    {
-                        MessageBox.Show("Ban Chưa Nhập Thong Tin Hóa Đơn", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
+                   if (comboMaKH.Text == "" || comboMaNV.Text == "" || txtMaHD.Text == "")
+                {
+                    MessageBox.Show("Ban Chưa Nhập Thong Tin Hóa Đơn", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
 
-                        string insert = "insert into HoaDon(MaHD,MaKH,MaNV,NgayLapHD,NgayGiaoHang) values ('" + txtMaHD.Text + "','" + comboMaKH.SelectedValue.ToString() + "','" + comboMaNV.SelectedValue.ToString() + "','" + dateTimePicker1.Value.ToString("MM/dd/yyyy") + "','" + dateTimePicker2.Value.ToString("MM/dd/yyyy") + "')";
-                        //if (dateTimePicker1.Value < dateTimePicker2.Value)
-                          //  MessageBox.Show("Vo van");
-                        //else
-                        //{ 
-                        SqlCommand cmdthem = new SqlCommand(insert, cn);
-                        cn.Open();
-                        cmdthem.ExecuteNonQuery();
-                        hienThiHD();
-                        MessageBox.Show("Them Thanh Cong ", "Thông Báo");
-                        //}
-                    }
-                
+                    string insert = "insert into HoaDon(MaHD,MaKH,MaNV,NgayLapHD,NgayGiaoHang) values ('" + txtMaHD.Text + "','" + comboMaKH.SelectedValue.ToString() + "','" + comboMaNV.SelectedValue.ToString() + "','" + dateTimePicker1.Value.ToString("MM/dd/yyyy") + "','" + dateTimePicker2.Value.ToString("MM/dd/yyyy") + "')";
+                    SqlCommand cmdthem = new SqlCommand(insert, cn);
+                    cn.Open();
+                    cmdthem.ExecuteNonQuery();
+                    hienThiHD();
+                    MessageBox.Show("Them Thanh Cong ", "Thông Báo");
+                }
             }
             catch (SqlException ex)
             {
