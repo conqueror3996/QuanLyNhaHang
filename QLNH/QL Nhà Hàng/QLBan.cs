@@ -92,6 +92,7 @@ namespace QL_Nhà_Hàng
         {
             try
             {
+
                 if (comboKV.Text == "" || txtMaBan.Text == "")
                 {
                     MessageBox.Show("Ban Chưa Nhập Thong Tin Hóa Đơn", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -102,7 +103,10 @@ namespace QL_Nhà_Hàng
                     string insert = "if not exists MaBan = '" + txtMaBan.Text + "' begin insert into Ban(MaBan,MaKhuVuc, ChiTiet, TrangThaiBan, TenBan) values ('" + txtMaBan.Text + "','" + comboKV.SelectedValue.ToString() + "','" + txtChiTiet.Text + "','" + txtTThai.Text + "','" + txtTenBan.Text + "') end";
 
                     SqlCommand cmdthem = new SqlCommand(insert, cn);
+
                     cn.Open();
+                     insert = "insert into Ban(MaBan,MaKhuVuc, ChiTiet, TrangThaiBan, TenBan) values ('" + txtMaBan.Text + "','" + comboKV.SelectedValue.ToString() + "','" + txtChiTiet.Text + "','" + txtTThai.Text + "','" + txtTenBan.Text + "')";
+                     cmdthem = new SqlCommand(insert, cn);
                     cmdthem.ExecuteNonQuery();
                     hienThiBan();
                     MessageBox.Show("Them Thanh Cong ", "Thông Báo");
@@ -111,7 +115,7 @@ namespace QL_Nhà_Hàng
             catch (SqlException ex)
             {
 
-                MessageBox.Show("lỗi Thêm Dữ liệu\n" );
+                MessageBox.Show("lỗi Thêm Dữ liệu\n");
             }
             finally
             {
