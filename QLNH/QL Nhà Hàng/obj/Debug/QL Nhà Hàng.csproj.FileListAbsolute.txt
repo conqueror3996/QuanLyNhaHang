@@ -124,6 +124,7 @@ D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL Nhà Hàng.cs
 D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\RdlCompile.cache
 D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\RdlCompile.compiled
 D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL Nhà Hàng.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
 D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\bin\Debug\QL Nhà Hàng.exe.config
 D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL Nhà Hàng.exe
 D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL Nhà Hàng.pdb
@@ -148,3 +149,23 @@ C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\D
 C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL Nhà Hàng.csproj.GenerateResource.Cache
 C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\RdlCompile.cache
 C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\RdlCompile.compiled
+=======
+>>>>>>> tan
+D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL Nhà Hàng.csprojResolveAssemblyReference.cache
+D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.Form_Thêm.resources
+D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.QLBan.resources
+D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.QLHoaDon.resources
+D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.QLKhachHang.resources
+D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.QLThucDon.resources
+D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.QLNhanVien.resources
+D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.Form_Main.resources
+D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.Login.resources
+D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.Properties.Resources.resources
+D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.rptHD.resources
+D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.rptKH.resources
+D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL_Nhà_Hàng.ThemHD.resources
+D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\QL Nhà Hàng.csproj.GenerateResource.Cache
+D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\RdlCompile.cache
+D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Debug\RdlCompile.compiled
+D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\bin\Debug\QL Nhà Hàng.exe
+D:\KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\bin\Debug\QL Nhà Hàng.pdb

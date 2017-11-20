@@ -141,33 +141,52 @@ namespace QL_Nhà_Hàng
             }
             else
             {
-                MessageBox.Show("Loi Them", "Thong Bao");
+
+                try
+                {
+                    //class_khachhang kh = new class_khachhang();
+
+                    if (kh.kiemtra(txtMaKH.Text.Trim(), txtTen.Text.Trim(), txtDiaChi.Text.Trim(), txtDienThoai.Text.Trim(), txtFax.Text.Trim()) == false)
+                    {
+                        kh.them(txtMaKH.Text, txtTen.Text, txtDiaChi.Text, txtDienThoai.Text, txtFax.Text);
+                        MessageBox.Show("Them Thanh Cong ", "Thông Báo");
+                        update();
+                    }
+                }
+                catch
+                {
+
+                    MessageBox.Show("Loi Them", "Thong Bao");
+                }
+
+                //try
+                //{
+                //    cn.Open();
+                //    string Insert = "Insert into KhachHang(MaKH, TenKH, DiaChi, DienThoai, Fax) values('" + txtMaKH.Text + "','" + txtTen.Text + "','" + txtDiaChi.Text + "','" + txtDienThoai.Text + "','" + txtFax.Text + "')";
+                //    SqlCommand cmdadd = new SqlCommand(Insert, cn);
+
+                //    cmdadd.ExecuteNonQuery();
+                //    Connect();
+                //    MessageBox.Show("Them Thanh Cong ", "Thông Báo");
+                //}
+                //catch (SqlException ex)
+                //{
+                //    MessageBox.Show("Loi Them", "Thong Bao" + ex.Message);
+
+                //}
+                //finally
+                //{
+                //    cn.Close();
+                //}
             }
-
-            //try
-            //{
-            //    cn.Open();
-            //    string Insert = "Insert into KhachHang(MaKH, TenKH, DiaChi, DienThoai, Fax) values('" + txtMaKH.Text + "','" + txtTen.Text + "','" + txtDiaChi.Text + "','" + txtDienThoai.Text + "','" + txtFax.Text + "')";
-            //    SqlCommand cmdadd = new SqlCommand(Insert, cn);
-
-            //    cmdadd.ExecuteNonQuery();
-            //    Connect();
-            //    MessageBox.Show("Them Thanh Cong ", "Thông Báo");
-            //}
-            //catch (SqlException ex)
-            //{
-            //    MessageBox.Show("Loi Them", "Thong Bao" + ex.Message);
-
-            //}
-            //finally
-            //{
-            //    cn.Close();
-            //}
-        
         }
         
         private void btnXoa_Click(object sender, EventArgs e)
         {
+
+
+
+            class_khachhang kh = new class_khachhang();
 
             if (kh.kiemtra(txtMaKH.Text, txtTen.Text, txtDiaChi.Text, txtDienThoai.Text, txtFax.Text) == false)
             {
@@ -205,6 +224,10 @@ namespace QL_Nhà_Hàng
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+
+
+            class_khachhang kh = new class_khachhang();
+
             if (kh.kiemtra(txtMaKH.Text, txtTen.Text, txtDiaChi.Text, txtDienThoai.Text, txtFax.Text) == false)
             {
                 kh.sua(txtMaKH.Text, txtTen.Text, txtDiaChi.Text, txtDienThoai.Text, txtFax.Text);
