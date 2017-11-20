@@ -15,7 +15,6 @@ namespace QL_Nhà_Hàng
     {
         String cnStr;
         SqlConnection cn;
-        class_khachhang kh = new class_khachhang();
         public QLKhachHang()
         {
             InitializeComponent();
@@ -131,15 +130,18 @@ namespace QL_Nhà_Hàng
         
         private void btnThem_Click(object sender, EventArgs e)
         {
-
-
-            if (kh.kiemtra(txtMaKH.Text.Trim(), txtTen.Text.Trim(), txtDiaChi.Text.Trim(), txtDienThoai.Text.Trim(), txtFax.Text.Trim()) == false)
+            try
             {
-                kh.them(txtMaKH.Text, txtTen.Text, txtDiaChi.Text, txtDienThoai.Text, txtFax.Text);
-                MessageBox.Show("Them Thanh Cong ", "Thông Báo");
-                update();
+                class_khachhang kh = new class_khachhang();
+
+                if (kh.kiemtra(txtMaKH.Text.Trim(), txtTen.Text.Trim(), txtDiaChi.Text.Trim(), txtDienThoai.Text.Trim(), txtFax.Text.Trim()) == false)
+                {
+                    kh.them(txtMaKH.Text, txtTen.Text, txtDiaChi.Text, txtDienThoai.Text, txtFax.Text);
+                    MessageBox.Show("Them Thanh Cong ", "Thông Báo");
+                    update();
+                }
             }
-            else
+            catch
             {
                 MessageBox.Show("Loi Them", "Thong Bao");
             }
@@ -168,7 +170,7 @@ namespace QL_Nhà_Hàng
         
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
+            class_khachhang kh = new class_khachhang();
             if (kh.kiemtra(txtMaKH.Text, txtTen.Text, txtDiaChi.Text, txtDienThoai.Text, txtFax.Text) == false)
             {
                 kh.xoa(txtTen.Text);
@@ -205,6 +207,7 @@ namespace QL_Nhà_Hàng
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            class_khachhang kh = new class_khachhang();
             if (kh.kiemtra(txtMaKH.Text, txtTen.Text, txtDiaChi.Text, txtDienThoai.Text, txtFax.Text) == false)
             {
                 kh.sua(txtMaKH.Text, txtTen.Text, txtDiaChi.Text, txtDienThoai.Text, txtFax.Text);
