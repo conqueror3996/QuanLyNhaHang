@@ -18,44 +18,59 @@ namespace UnitTest
             dn = new Login();
         }
         [TestMethod]
-        public void TestMethod1()
+        public void TestMethodLoginTrue()
         {
             Assert.AreEqual(dn.ktdangnhap("admin","123456"), true);
         }
         [TestMethod]
-        public void TestMethod2()
+        public void TestMethodLoginFalse()
         {
             Assert.AreEqual(dn.ktdangnhap("gtdrgte", "1te"), false);
         }
         [TestMethod]
-        public void TestMethod3()
+        public void TestMethodLoginWithoutUsername()
         {
             Assert.AreEqual(dn.ktdangnhap("", "123456"), false);
         }
         [TestMethod]
-        public void TestMethod4()
+        public void TestMethodLoginWithoutPassword()
         {
             Assert.AreEqual(dn.ktdangnhap("admin", ""), false);
         }
         [TestMethod]
-        public void TestMethod5()
+        public void TestMethodNhapRong()
         {
             Assert.AreEqual(kh.kiemtra("", "", "", "", ""), true);
         }
         [TestMethod]
-        public void TestMethod6()
+        public void TestMethodNhapDayDu()
         {
             Assert.AreEqual(kh.kiemtra("blabla", "uriew", "ertet", "eretret", "rtr"), false);
         }
         [TestMethod]
-        public void TestMethod7()
+        public void TestMethodNhapThieuThongTin7()
         {
             Assert.AreEqual(kh.kiemtra("", "uriew", "ertet", "eretret", "rtr"), true);
         }
         [TestMethod]
-        public void TestMethod8()
+        public void TestMethodNhapThieuThongTin8()
         {
             Assert.AreEqual(kh.kiemtra("blabla", "", "ertet", "eretret", "rtr"), true);
+        }
+        [TestMethod]
+        public void TestMethodNhapThieuThongTin9()
+        {
+            Assert.AreEqual(kh.kiemtra("blabla", "qưeqwe", "", "eretret", "rtr"), true);
+        }
+        [TestMethod]
+        public void TestMethodNhapThieuThongTin10()
+        {
+            Assert.AreEqual(kh.kiemtra("blabla", "xvcxvx", "ertet", "", "rtr"), true);
+        }
+        [TestMethod]
+        public void TestMethodNhapThieuThongTin11()
+        {
+            Assert.AreEqual(kh.kiemtra("blabla", "hfghgf", "ertet", "eretret", ""), true);
         }
     }
 }
