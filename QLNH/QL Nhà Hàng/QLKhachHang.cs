@@ -174,10 +174,10 @@ namespace QL_Nhà_Hàng
                 //    MessageBox.Show("Loi Them", "Thong Bao" + ex.Message);
 
                 //}
-                //finally
-                //{
-                //    cn.Close();
-                //}
+                finally
+                {
+                    cn.Close();
+                }
             }
         }
         
@@ -285,11 +285,11 @@ namespace QL_Nhà_Hàng
             dataGridView1.DataSource = ds.Tables[0];
             radMa.Checked = false;
             radTen.Checked = false;
-            txtMaKH.Text = " ";
-            txtTen.Text = " ";
-            txtDienThoai.Text = " ";
-            txtDiaChi.Text = " ";
-            txtFax.Text = " ";
+            txtMaKH.Text = "";
+            txtTen.Text = "";
+            txtDienThoai.Text = "";
+            txtDiaChi.Text = "";
+            txtFax.Text = "";
         }
     }
 }

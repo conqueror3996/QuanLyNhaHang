@@ -5,3 +5,10 @@ D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\UnitTest\bin\Debug\QL Nhà Hàng.pdb
 D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
 D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\UnitTest\obj\Debug\UnitTest.dll
 D:\Kiem Thu Phan Mem\QuanLyNhaHang\QLNH\UnitTest\obj\Debug\UnitTest.pdb
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\UnitTest\bin\Debug\UnitTest.dll
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\UnitTest\bin\Debug\UnitTest.pdb
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\UnitTest\bin\Debug\QL Nhà Hàng.exe
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\UnitTest\bin\Debug\QL Nhà Hàng.pdb
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\UnitTest\obj\Debug\UnitTest.dll
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\UnitTest\obj\Debug\UnitTest.pdb

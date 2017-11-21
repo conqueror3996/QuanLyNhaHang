@@ -31,5 +31,10 @@ namespace UnitTest
         {
             Assert.AreEqual(kh.kiemtra("", "", "", "", ""), true);
         }
+        [TestMethod]
+        public void TestMethod4()
+        {
+            Assert.AreEqual(kh.kiemtra("blabla", "uriew", "ertet", "eretret", "rtr"), false);
+        }
     }
 }
