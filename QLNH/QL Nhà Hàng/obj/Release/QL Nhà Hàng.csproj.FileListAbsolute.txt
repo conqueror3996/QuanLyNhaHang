@@ -39,3 +39,24 @@ C:\Users\Admin\Desktop\BTQLNH\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL_Nh
 C:\Users\Admin\Desktop\BTQLNH\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL Nhà Hàng.csproj.GenerateResource.Cache
 C:\Users\Admin\Desktop\BTQLNH\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\RdlCompile.cache
 C:\Users\Admin\Desktop\BTQLNH\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\RdlCompile.compiled
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\bin\Release\QL Nhà Hàng.exe.config
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL Nhà Hàng.exe
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL Nhà Hàng.pdb
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\bin\Release\QL Nhà Hàng.exe
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\bin\Release\QL Nhà Hàng.pdb
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL Nhà Hàng.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL_Nhà_Hàng.Form_Thêm.resources
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL_Nhà_Hàng.QLBan.resources
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL_Nhà_Hàng.QLHoaDon.resources
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL_Nhà_Hàng.QLKhachHang.resources
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL_Nhà_Hàng.QLThucDon.resources
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL_Nhà_Hàng.QLNhanVien.resources
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL_Nhà_Hàng.Form_Main.resources
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL_Nhà_Hàng.Login.resources
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL_Nhà_Hàng.Properties.Resources.resources
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL_Nhà_Hàng.rptHD.resources
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL_Nhà_Hàng.rptKH.resources
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL_Nhà_Hàng.ThemHD.resources
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\QL Nhà Hàng.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\RdlCompile.cache
+C:\Users\Admin\Desktop\BTL_KiemThuPhanMem\QuanLyNhaHang\QLNH\QL Nhà Hàng\obj\Release\RdlCompile.compiled
