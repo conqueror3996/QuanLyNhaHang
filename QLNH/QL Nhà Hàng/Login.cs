@@ -44,7 +44,7 @@ namespace QL_Nhà_Hàng
                 
             }
             else
-                MessageBox.Show("Tên Đăng Nhập không Đúng,Vui Lòng Kiểm Tra lại", "Thông Báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Tên Đăng Nhập hoặc Mật khẩu không Đúng,Vui Lòng Kiểm Tra lại", "Thông Báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
         }
 
         private void Login_Load(object sender, EventArgs e)

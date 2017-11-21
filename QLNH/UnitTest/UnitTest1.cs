@@ -22,6 +22,7 @@ namespace UnitTest
         {
             Assert.AreEqual(dn.ktdangnhap("admin","123456"), true);
         }
+        [TestMethod]
         public void TestMethod2()
         {
             Assert.AreEqual(dn.ktdangnhap("gtdrgte", "1te"), false);
@@ -29,12 +30,32 @@ namespace UnitTest
         [TestMethod]
         public void TestMethod3()
         {
-            Assert.AreEqual(kh.kiemtra("", "", "", "", ""), true);
+            Assert.AreEqual(dn.ktdangnhap("", "123456"), false);
         }
         [TestMethod]
         public void TestMethod4()
         {
+            Assert.AreEqual(dn.ktdangnhap("admin", ""), false);
+        }
+        [TestMethod]
+        public void TestMethod5()
+        {
+            Assert.AreEqual(kh.kiemtra("", "", "", "", ""), true);
+        }
+        [TestMethod]
+        public void TestMethod6()
+        {
             Assert.AreEqual(kh.kiemtra("blabla", "uriew", "ertet", "eretret", "rtr"), false);
+        }
+        [TestMethod]
+        public void TestMethod7()
+        {
+            Assert.AreEqual(kh.kiemtra("", "uriew", "ertet", "eretret", "rtr"), true);
+        }
+        [TestMethod]
+        public void TestMethod8()
+        {
+            Assert.AreEqual(kh.kiemtra("blabla", "", "ertet", "eretret", "rtr"), true);
         }
     }
 }
